@@ -1,0 +1,192 @@
+---
+layout: post
+title: "15-300 Project Proposal"
+date: 2018-12-22
+excerpt: "Project proposal for research to be done in 15-400 come
+Spring 2018"
+research: true
+
+comments: false
+---
+
+# Description
+
+I will be working with Professor Keenan Crane and his graduate 
+student Rohan Sawhney in the CMU Graphics Lab on improving 
+Boundary First Flattening, an open source software that maps 
+3D surfaces to a 2D domain. Specifically, I will be researching 
+techniques that will improve the space efficiency of the generated 
+2D atlas, while avoiding the creation of mapped overlaps.
+
+The proposed research is meant to be an feature of the open source 
+software Boundary First Flattening, which is a surface parameterization 
+software which allows you to manipulate the shape of the target 
+2D surface in real time. The challenges here are that when 3D meshes 
+have sharp protusions, such as a person's nose on a 3D model of a 
+face. These sharp points create distortions on the 2D parameterization, 
+and, although the distortions are minimized, they can still become 
+quite large. This distortion can be reduced by placing a few cone 
+singularities on the 3D mesh. These cones represent the start to a 
+cut towards the boundary of the mesh and allow for more flexibility 
+when creating the 2D surface. By adding more cones, we can create a 
+less distorted parameterization in 2D.
+
+This however, introduces some new problems. First, placing cones 
+doesn't eliminate the possiblity of a parameterization creating 
+overlaps in the 2D surface. This means that some distinct parts of 
+a 3D mesh can map to the same location in the 2D surface. This is 
+an issue because these 2D surfaces are often used to store textures, 
+so overlaps cause the textures to become overwritten in the 
+overlapped areas. Additionally, the introduction of these cones 
+that create cuts along the mesh can lead to paramterizations that 
+have long boundary lengths. This means that, as we try to store the 
+atlas in a 2D rectangular array, these long boundary lengths create 
+shapes that leave a great deal of empty space. This empty space 
+carries no special signal, but still has to be loaded into memory 
+when this finished atlas is called on. In situations that require 
+speed and efficiency, such as when we want to load textures for 
+video games on the fly, this wasted space is far from ideal and 
+should be eliminated.
+
+To handle this issue, we hope to take advantage of a special property 
+given by the design Boundary First Flattening. When Boundary First 
+Flattening makes cuts in the mesh, it does them seamlessly, in this 
+case meaning that the triangle side lengths on one side of the cut 
+are the same length on the other side of the cut. This is not 
+necessarily true in other flattening algorithms, as they might make 
+modifications that distort the triangle side lengths after the cut 
+has been made. But Boundary First Flattening guarantees this does 
+not happen, making it possible for us to move triangles from one 
+part of the boundary to another part, with the goal of reducing 
+the size of the "box" that encloses the atlas. If some efficient, 
+intelligent solution can be found through this research, Boundary 
+First Flattening will not only be able to provide parameterizations 
+of 3D surfaces with minimal distortion, but also be able to provide 
+them with minimized space usage.
+
+# Goals
+## 75% Goal
+At a minimum I should be able to finish an implementation of the 
+cutting and repacking strategy described in the Box Cutter research 
+paper. From there I would like to also test it out over many 
+different meshes so that I can confirm its ability. The result 
+should be more space efficient and not have overlaps. Furthermore, 
+I should also at least have the naive implementation that takes 
+advantage of the Boundary First Flattening properties.
+
+## 100% Goal
+In addition to my 75% goals, my 100% goal includes finding some more 
+intelligent solution to the atlas packing problem. With this solution 
+I hope to test it on multiple meshes to confirm its efficiency and 
+to gather metrics to present as my results.
+
+## 125% Goal
+In addition to my 100% goals, my 125% goal goes beyond finding just 
+the intelligent solution and perhaps explores problems along the way 
+that I had identified with the overall process but left behind because 
+they were not in the focus of this project. Another possibility to 
+extend this project is to just continue research on another technique 
+that is superior to what I've created for the 100% goal.
+
+## Milestones
+### 1st Technical Milestone for 15-300
+By the end of the fall semester I hope to be familiarized with the 
+Boundary First Flattening software and the methods that power it. 
+Additionally I will be doing further background research into the 
+area and gathering research papers to read over the winter break 
+before the start of the next semester. Also, to note that throughout 
+this entire process, I should be thinking on how I will achieve my 
+final solution to this problem. As it won't be possible to just 
+dream something up in the final weeks, I should be always considering 
+the final goal througout the semester.
+
+## Bi-weekly Milestones for 15-400
+### February 1st, 2019
+One of the problems that we described is that some parameterizations 
+introduce overlaps where different points on the 3D surface get mapped 
+to the same location on the 2D atlas. By Febryary 1st, I hope to 
+have some program that takes in an atlas and the 3D source and 
+identifies any overlaps that were created. Furthermore, the program 
+should be able to fix these overlaps.
+
+### February 15th, 2019
+Our goal here is to improve the storage efficiency of the 2D atlas, 
+so then by February 15th I should have implemented a system to 
+evaluate the efficiency of the current atlas. This should be a 
+judgement of how much of the space within the 2D space given to 
+the atlas that is actually occupied.
+
+### March 1st, 2019
+By March 1st I should be reaching a halfway point on implementing 
+the Box Cutter algorithm described in [3]. This should be giving me 
+an idea of how to implement some algorithm that modifies the 
+paramterization/mesh to create a better packed atlas.
+
+### March 22nd, 2019
+At this time I will be finished with the Box Cutter algorithm. During 
+this whole period I hope to have also done a great deal of thinking 
+on if there is a better way to pack this atlas. There are some nice 
+assumptions that the Boundary First Flattening gives, like being 
+seamless, which were not possible in Box Cutter.
+
+### April 5th, 2019
+Implement a naive, greedy strategy that takes advantage of the 
+construction of the atlas by Boundary First Flattening. As we know 
+that the triangles on the boundaries have different locations along 
+the rest of the boundary where they can be removed and placed, we can 
+greedily move triangles and evaluate if the packing efficiency has 
+improved at all. This of course is very slow but it's the first step 
+to some possible inspiration on something much more intelligent. 
+Also, if possible, implement a probablistic strategy that takes 
+some groups of boundary triangles randomly with some probability and 
+relocate them. Evaluate if this strategy is better than the naive 
+version.
+
+### April 19th, 2019
+This milestone is a bit more open ended than the ones that come 
+before. All this time before should have been spent pondering on if 
+there is some better way to pack these triangles in the atlas. So 
+then, the goal for April 19th is to implement this more intelligent 
+strategy. As to what this strategy is, this is open to research and 
+is the purpose of this project.
+
+### May 3rd, 2019
+One thought is that it could be possible to take an atlas, and simplify 
+it to make a coarser representation with less triangles. Potentially 
+then, working with this problem could be faster, but would require us 
+to then to go back to a fine grained set of triangles after the 
+accelerated algorithm has been run. It's open as to whether this 
+method is effective or even possible, so by May 3rd I hope to 
+have explored that possibility.
+
+The initial literature search can be organized into three parts. 
+Firstly there is are papers thatdescribe the general problem to be 
+solved and the background of the project’s motivation.These are two 
+papers on the Box Cutting algorithm [3] and the Boundary First 
+Flatteningalgorithm [6]. Then, there are papers that explore 
+intrinsic triangulations, in order to hope-fully provide motivation 
+on the current state of the work and more insight into any 
+potentialsolutions. These papers are [2] and [1]. Lastly, 
+unfolding of polyhedra has some relevanceto the subject that 
+I am exploring, and I will be referencing the two sources [5] and [4].
+
+## Resources Needed
+Boundary First Flattening is in C++, so it should not be difficult 
+to get it running on myown computer. There are some dependencies that 
+I will need to install as well, but they initially look easy to 
+obtain as well.
+
+# References
+\[1\] Keenan Crane. Conformal geometry of simplicial surfaces. Rough Draft, 2018.
+
+\[2\] Matthew Fisher, Boris Springborn, Alexander I. Bobenko, and Peter Schroder. An algorithm for the construction of intrinsic delaunay triangulations with applications to digitalgeometry processing. InACM SIGGRAPH 2006 Courses, SIGGRAPH '06, pages 69-74,New York, NY, USA, 2006. ACM.
+
+\[3\] Max Limper, Nicholas Vining, and Alla Sheffer. Box cutter: Atlas refinement for efficientpacking via void elimination.ACM Trans. Graph., 37(4):153:1-153:13, July 2018.
+
+\[4\] Joe O'Rourke and Komei Fukuda. Unfolding convex polytopes. 
+
+ - Available at [http://jeffe.cs.illinois.edu/open/unfold.html](http://jeffe.cs.illinois.edu/open/unfold.html) (11/01/2018).
+
+\[5\] Joseph O'Rourke. Unfolding polyhedra. 2008.
+
+\[6\] Rohan Sawhney and Keenan Crane. Boundary first flattening. ACM Trans.Graph.,37(1):5:1-5:14, December 2017.

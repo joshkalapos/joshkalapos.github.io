@@ -8,17 +8,133 @@ project: true
 comments: false
 ---
 
-Scotty3D is a full-featured software package for 3D modeling, rendering, and 
-animation. This was an ongoing course project for 15-462 Computer Graphics
+Scotty3D is a full-featured software package for 3D modeling, 
+rendering, and animation. This was an ongoing course project 
+for 15-462 Computer Graphics
 
 The project came in three parts, Mesh Edit, Pathtracer, and Animation
 
-### Mesh Edit
+# Mesh Edit
+
+<figure>
+  <a href="/assets/img/scotty3d/xwing.png">
+    <img src="/assets/img/scotty3d/xwing.png">
+  </a>
+  <figcaption>X-Wing made using mesh edit in Scotty3D</figcaption>
+</figure>
+
+The first part of Scotty3D, the mesh edit mode made it possible to do 
+basic 3D modeling using local and global operations on the mesh. 
+
+Some local edits that I implemented include face bevel, split edge, 
+erase edge and flip edge. With these functions I could manipulate 
+the mesh little piece by piece to get the object in the shape that 
+I envisioned. 
+
+I would not have been able to make much with just 
+local edits so I also built some global editing functions
+- Triangulate
+- Linear Subdivision 
+- Catmull-Clark Subdivision
+- Loop subdivision 
+
+{% capture images %}
+	/assets/img/scotty3d/original.png
+	/assets/img/scotty3d/triangulate.png
+	/assets/img/scotty3d/subdivide-linear.png
+{% endcapture %}
+{% include gallery images=images caption="Left to right: Original, Triangulate, Subdivide Linear" cols=3 %}
+
+{% capture images %}
+	/assets/img/scotty3d/subdivide-catmull.png
+	/assets/img/scotty3d/subdivide-catmull2.png
+	/assets/img/scotty3d/subdivide-loop.png	
+{% endcapture %}
+{% include gallery images=images caption="Left to right: Catmull-Clark applied once, Catmull-Clark repeatedly applied, Subdivide Linear repeatedly applied" cols=3 %}
+
+With just these functions I was able to take the original cube collada
+file and massage the mesh into the X-Wing pictured above. 
+
+# Pathtracer
+
+The second part of Scotty3D's goal was to create a photorealistic 
+renderer. Basically this whole process was an application of the 
+rendering equation
+
+\\[ L\_o(p, \omega) = L\_e(p, \omega) + \int\_{H^2} f\_r(p, \omega\_i \rightarrow \omega\_o)L\_i(p, \omega\_i)cos(\theta)d\omega\_i \\]
+
+Meaning in short that the outgoing/observed radiance is the emitted 
+radiance (if the object is a light source) plus the sum of all 
+incoming radiance across the hemisphere multiplied by the angle of
+each incoming direction and the scattering function 
+\\(f\_r(p, \omega\_i \rightarrow \omega\_o)\\).
+
+Using this equation can create some very beautiful images, but there
+were also some additional steps taken to accelerate the rendering 
+process.
+
+An important acceleration was using a bounding volume hierarchy (BVH) 
+to calculate ray-triangle intersections. Referring back to mesh edit,
+this is another reason why having the mesh only be composed of
+triangles is useful because we can rely on only a single primitive 
+type, triangles, for intersection. Without some kind of data structure
+to make geometric queries for each ray sent by the camera, Scotty3D
+would have to check each triangle in a mesh for intersection and
+that is clearly not ideal for meshes with millions of triangles. 
+
+Instead, primitives are partitioned in a tree structure where each
+node has a bounding volume associated with it. All primitives that are
+descendents of the node are within that volume. So, with some volume
+partitioning strategy, a intersection query can step through
+the BVH tree by calculating box intersections to find the correct leaf
+of triangles. Then the ray can find an intersection point if it hits
+any of those triangles.
+
+<figure class="half">
+  <a href="/assets/img/scotty3d/cb_dragon.png"><img src="/assets/img/scotty3d/cb_dragon.png"></a>
+  <a href="/assets/img/scotty3d/cb_spheres.png"><img src="/assets/img/scotty3d/cb_spheres.png"></a>
+  <figcaption>Pathtracing Render Examples</figcaption>
+</figure>
 
 
+These images were rendered with additional features such as materials
+other than a lambertian surface (diffuse). The dragon has a sort of
+reflective metallic surface that comes with implementing different
+materials objects can take on their surface. This includes surfaces
+such as glass or a perfect mirror. Additionally, pathtracer had
+the ability to simulate environmental lighting.
 
-### Pathtracer
+# Animation
 
-### Animation
+The final piece of Scotty3D was adding an animation mode.
+This included three different animation modes, spline interpolation, 
+skeleton kinematics, and physical simulation. 
+
+Spline interpolation was the simplest mode in which between
+different keyframes the positions of the vertices were interpolated
+using a natural spline. This way the object when in motion would 
+move in a smooth manner, as opposed to a linear interpolation which 
+would give some awkward accelerations. 
+
+Skeleton kinematics was combined with linear blend skinning to
+provide for some sort of limb motion for meshes. Linear blend
+skinning would allow for the mesh's vertices to be translated with
+the constructed skeleton and the skeleton kinematics actually
+used inverse kinematics to make the skeleton reach different
+goal positions. Linear blend skinning could also work through
+setting the joints of the skeleton manually and using spline 
+interpolation between the keyframes, but I found using kinematics
+produced more interesting results. 
+
+The physical simulation used the wave equation and forward/symplectic 
+euler to simulate a wave's displacement over time
+of the vertices on a mesh. For such an interesting animation, the
+implementation to describe the movement was actually pretty simple.
+
+Here's a video that shows off the different abilities of 
+Scotty3D's animation mode. I did not take advantage of the pathtracer
+that I implemented because it would take quite a while to render 
+frame by frame for 30/60 fps. So this video uses much faster 
+rasterization. 
 
 {% include youtube.html id="zDgj82fOrgU" %}

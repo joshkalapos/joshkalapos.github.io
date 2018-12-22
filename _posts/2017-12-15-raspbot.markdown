@@ -8,6 +8,8 @@ project: true
 comments: false 
 ---
 
+![raspbot](/assets/img/raspbot/raspbot.png)
+
 A semester long project for the CMU class Mobile Robot Programming Laboratory
 
 My raspbot project was a semester long effort to program a small, sensor equipped robot to become capable of displaying advanced mobile capabilities. The construction of the robot and its design was handled by the professor, but the implementation of the software that powered and controlled the robot's movements were left upon myself and two other group members. Parts of the project were initially simple, such as implementing both feedforward and feedback control, to achieve accurate motion when directing a robot from point A to point B.

@@ -5,7 +5,7 @@ date:   2018-05-15
 excerpt: "A final project for 15-418: Parallel Computer Architecture and Programming"
 project: true
 
-comments: true
+comments: false
 ---
 
 A final project for [15-418: Parallel Computer Architecture and Programming]

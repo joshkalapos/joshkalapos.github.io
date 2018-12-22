@@ -19,7 +19,10 @@ My term project is a 2.5d shooter where the player fights against AI. In the gam
 # Graphs
 The MediumAI, rather than wandering around aimlessly, uses a generated graph and Breadth First Search to seek out the player. In this process the MediumAI first sees if it can attack the player, using the same rectangle process as the EasyAI. If it is not in range, then it follows the path set up by the BFS method. The BFS method uses graph theory to determine the shortest route to the player while also considering obstacles. This is accomplished by generating a graph that has repeated nodes layered over the map. Nodes are placed in a regular order and are not placed when they lie within a obstacle. Additionally, edges are formed between nodes that are adjacent to each other in the x and y direction. Through this graph the MediumAI can use the player’s position on the graph and then its own position to determine the best path and make a move. It repeats this process of movement and attack until the player is dead. The only break in this process is when the player shoots an arrow towards the MediumAI. The MediumAI has a set of rectangles that lie in all 4 directions that will detect a player’s arrow if it intersects with one of them. First the “dangerDetector” determines if the arrow is headed towards the mediumAI. If it is, then the MediumAI will do its best to dodge the arrow by moving out of the way. Avoiding danger takes priority over pursuing the player and attacking and will be done first. The MediumAI has two health and will lose part of its armor when hit by an arrow. Note: By pressing g during survival, the map’s graph is displayed. By pressing s, the path of the mediumAI is shown.
 
-![Graph Example](/assets/AAgraph.png)
+<figure>
+  <a href="/assets/img/archerarena/AAgraph.png"><img src="/assets/img/archerarena/AAgraph.png"></a>
+  <figcaption>Generated Graph for Basic Map</figcaption>
+</figure>
 
 # Character
 Character is a class that both the Player and AI’s inherit that handles all animations through a series of clipping sprite sheets to their appropriate sections and cycling through these clippings to create movement and animation. Additionally the function updateWalk checks if the character is running into a wall and will prohibit the character from passing through.
@@ -30,7 +33,10 @@ Projectiles are sprites and are the arrows that the player and AI shoot at each 
 # Player
 The player class handles only the init of the character and the update of its movements and graphics. Within the game class is the spawning of the player. By default the player will spawn in the top left of the screen. But, in custom map mode, the user can decide to cover up the top left of the screen. Then, the spawning system will seek out the next open place on the map and spawn the player there. The player’s actions are controlled by the key events. Where movement is controlled by the arrow keys, spacebar to shoot.
 
-![Player](/assets/AAplayerarrow.png)
+<figure>
+ <a href="/assets/img/archerarena/AAPlayerarrow.png"><img src="/assets/img/archerarena/AAPlayerarrow.png"></a>
+ <figcaption>Sprite Sheet for Player Animation</figcaption>
+</figure>
 
 # Game Methods
 If there are no more enemies left on the screen, the game spawns the next wave of enemies. By default these enemies will spawn in the quadrant that is opposite to the player. So if the player is in the bottom right quadrant when the round ends, the enemies will spawn in the top left. If this area is covered, the AI will spawn in the next quadrant in clockwise order. As the number of waves that the player has survived increases, the number of enemies that spawn in each wave increases as well. Additionally, the likelihood that each spawned enemy is a mediumAI is increased as well.
@@ -49,7 +55,10 @@ The way the custom levels mode works is that is starts with a list of obstacles 
 
 On the display is a faded wallPiece, representing that if the mouse was pressed, a wall would be placed in that location. The user can click and drag on the screen to create a desired rectangular wall and place it on the map. This is accomplished by storing the start and end points of the click and drag, converting it to the grid format, and updating the model to later be drawn. Implemented also is an undo and redo feature that will undo previous mistakes and also redo mistaken mistakes. (r key for redo, u key for undo). The redo and undo store the recent 2d representations and also the deleted or redone rectangles. Additionally, when the user tries to place a wall, the system checks if every open point on the board is then reachable. If it cannot reach every point, then it will not allow the placement of the wall. This is what requires the 2d representation of the map in addition to the pygame representation.
 
-![CustomLevels](/assets/AAcustom.png)
+<figure>
+  <a href="/assets/img/archerarena/AAcustom.png"><img src="/assets/img/archerarena/AAcustom.png"></a>
+  <figcaption>Example of Creating a Custom Map</figcaption>
+</figure>
 
 # Custom Level UI
 Although Secrets of Grindea and Castle Crashers both don’t have a custom level system in their game. I thought it would benefit the user experience to enable the user to create their own maps. From most custom level portions of games that I have seen, the user is usually able to visually see the addition he or she is about to make. For this reason I have the faded block displayed for whenever the player is hovering over the screen or clicking and dragging out. The user also tends to make mistakes when creating a map, so I also implemented an undo and redo feature for them, so they don’t have to start over when they make a bad placement. Additionally, the game checks that there are not too many walls on the screen, in order to give the game room to spawn characters. The user is notified on how much space they can take up, which is 2/3 of the screen space. If this was not in place then the user experience in the survival mode would suffer.
@@ -69,22 +78,22 @@ Python
 
 # Graphics
 
-Characters
+[Characters](http://opengameart.org/content/lpc-medieval-fantasy-character-sprites)
 
-Walls
+[Walls](http://opengameart.org/content/16x16-pixel-art-dungeon-wall-and-cobblestone-floor-tiles)
 
-Potion
+[Potion](http://opengameart.org/content/potion-0)
 
-Arrow Keys
+[Arrow Keys](http://www.101computing.net/wp/wp-content/uploads/arrowKeys.png)
 
-Space bar
+[Space bar](http://www.joshbenson.com/geeklift-spacebar-trick-google-power-search-and-ccp-hotkeys/space-bar-trick/)
 
-P, E, G, S, Escape Key
+[P, E, G, S, Escape Key](http://www.wpclipart.com/computer/keyboard_keys/)
 
-Sprite Sheet Clipping Adapted from here
+Sprite Sheet Clipping Adapted from [here](http://xorobabel.blogspot.com/2013/01/an-updated-guide-to-implementing-2d.html)
 
 Inspiration for Breadth First Search are from The 112 Optional Lecture on Graph Theory
 
 Pygamegame.py from Lukas Peraza 112 Lecture on pygame
 
-FloodFill taken from 112 website
+FloodFill taken from 112 [website](http://www.cs.cmu.edu/~112/notes/notes-recursion-part2.html#floodFill)

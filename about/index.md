@@ -8,19 +8,35 @@ comments: false
 I was born in Toledo, OH but grew up in Pittsburgh, PA.
 There I graduated from Mt. Lebanon High School.
 
-## Activities
+<figure class="third">
+  <a href="/assets/img/about/mountain.jpg"><img src="/assets/img/about/mountain.jpg"></a>
+  <a href="/assets/img/about/case2018.jpg"><img src="/assets/img/about/case2018.jpg"></a>
+  <a href="/assets/img/about/oldboat.jpg"><img src="/assets/img/about/oldboat.jpg"></a>
+</figure>
 
-# Cross Country and Track
+# Activities
+
+## Cross Country and Track
 
 At school I also run for the
 [cross country team](http://athletics.cmu.edu/sports/mxc/index)
 in the fall and the
 [track and field team](http://athletics.cmu.edu/sports/mtrack/index)
-in the winter/spring. Every day of the week almost year round I am training
-to become a faster competitor.
+in the winter/spring. Running is easily one of my biggest time commitments
+at home or school and has really shaped my life and habits over the years.
 
+My team and I use this really old site 
+[Logarun](http://www.logarun.com/calendars/joshkalapos/) to track our 
+training. Has not seen an update in years and I know there there are
+other sites out there, but this one is ours.
 
-# Star Wars Stuco Instructor
+<figure class="half">
+  <a href="/assets/img/about/rowan2018.jpg"><img src="/assets/img/about/rowan2018.jpg"></a>
+  <a href="/assets/img/about/regionals2018.jpg"><img src="/assets/img/about/regionals2018.jpg"></a>
+  <figcaption>Rowan Invitational 2018 and Regionals 2018</figcaption>
+</figure>
+
+## Star Wars Stuco Instructor
 
 As part of the [Student College program](https://www.cmu.edu/stuco/) at CMU I
 coteach the course Star Wars: The Course Awakens for other students at the
@@ -33,11 +49,14 @@ now the Spring 19 semesters. The curriculum is primarily studying the
 inspirations that led to the creation of Star Wars and then also the effects
 that it has had on culture following each movie release
 
-<img src="/assets/img/about/StarWars_Stuco.png">
+<figure>
+  <a href="/assets/img/about/StarWars_Stuco.png"><img src="/assets/img/about/StarWars_Stuco.png"></a>
+  <figcaption>Stuco Recruitment Flyer</figcaption>
+</figure>
 
-## Education
+# Education
 
-# Carnegie Mellon University
+## Carnegie Mellon University
 
 Currently I am studying Computer Science at Carnegie Mellon University
 with a minor in Robotics
@@ -59,5 +78,4 @@ with a minor in Robotics
 - 21-241 Matrices and Linear Transformations
 - 21-259 Calculus in 3D
 - 36-217 Probability and Random Processes
-
 
