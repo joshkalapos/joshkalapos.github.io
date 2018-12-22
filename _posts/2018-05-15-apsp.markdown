@@ -1,0 +1,328 @@
+---
+layout: post
+title:  "All Pairs Shortest Path Parallelized"
+date:   2018-05-15
+excerpt: "A final project for 15-418: Parallel Computer Architecture and Programming"
+project: true
+
+comments: true
+---
+
+A final project for [15-418: Parallel Computer Architecture and Programming]
+
+Jared Moore (jmoore1) and Josh Kalapos (jkalapos)
+
+View our project on github [here]
+
+View [Checkpoint 1](/assets/jkalapos_jmoore1_checkpoint_1.pdf)
+
+View [Checkpoint 2](/assets/jkalapos_jmoore1_checkpoint_2.pdf)
+
+### Project Proposal
+## Summary
+We are going to implement Johnson’s and Floyd-Warshall’s Algorithms for All Pairs Shortest Paths (APSP) using 
+OpenMP and CUDA, comparing their performances in these different models of parallelism in order to study 
+which algorithm performs better in these varying contexts.
+
+## Background
+# Overview
+We plan to investigate two graph search algorithms for solving all-pairs shortest 
+paths: the Floyd-Warshall Algorithm and Johnson’s Algorithm. The goal of 
+these algorithms is to find the shortest path that between any two pairs of nodes. 
+Both algorithms support graphs with negative length edges, although neither 
+support negative cycles. Details on sequential implementations of these algorithms 
+may come from these CMU’s own 15-451 lecture notes or their respective Wikipedia 
+pages. [1], [2], [3]
+
+We see from the 15-451 lecture notes that Floyd-Warshall’s Algorithm has a 
+best-case and worst-case performance of(V3)while Johnson’s Algorithm has a 
+worst-case performance of O(V2log(V) + VE), with V being the number of vertices
+ and E being the number of edges in the graph. However, this includes the use 
+ of the Bellman-Ford Algorithm, adding to complexity of implementation, 
+ and relies on the use of Fibonacci heaps, a data structure that may or may 
+ be high performance. [4]
+
+Conventional wisdom tells us that Floyd-Warshall’s Algorithm should only be better when graphs are dense (E is large relative to V). We want to find practical bounds to this, as we speculate that the data-structure overhead for Johnson’s Algorithm may be notable.
+
+# Floyd-Warshall Background
+An interesting strategy to obtain speedup is to divide the distance matrix W into 
+smaller blocked matrices A in order to increase cache locality. The general 
+algorithm for Floyd-Warshall’s Algorithm remains the same, except Floyd-Warshall 
+is performed on each block at a time, which is more compatible with the memory 
+hierarchy. The blocked version of Floyd-Warshall’s Algorithm can be easily made 
+parallel as, though the outermost loop has dependencies and cannot have its 
+iterations divided up, all of the inner-loops can be run independently. This 
+strategy opens up clear benefit from parallelism, and we wish to explore how 
+effectively this problem is improved through just adding blocking parallelism 
+to Floyd-Warshall. [5]
+
+![Figure 1: Blocked Floyd Warshall](/assets/img/apsp/APSP_Fig1.png) | ![Figure 2: Visualizing blocking on the matrix W](/assets/img/apsp/APSP_Fig2.png) | ![Figure 3: Parallel Blocked Floyd-Warshall](/assets/img/apsp/APSP_Fig3.png)
+
+This method of blocking benefits greatly from parallel strategies using OpenMP, 
+as with a shared memory address space the results can be written for all threads 
+to see in the next iteration, and even better performance can be achieved as 
+through blocking the threads can possibly be placed on different cache lines 
+so there is reduced false sharing. Even more so, the data parallel model 
+that drives general purpose GPU programming can seek to benefit greatly 
+from the exposed parallelism of Floyd-Warshall’s Algorithm. 
+It would be interesting to map this problem to a GPU setting and 
+observe how much speedup the GPU can produce even when compared 
+to an OpenMP implementation on the CPU.
+
+# Johnson’s Algorithm Background
+By exploring the performance differences between Johnson’s 
+Algorithm and Floyd-Warshall’s Algorithm, Holmes et al. 
+show results that indicate Johnson’s Algorithm has 
+superiority over Floyd-Warshall’s Algorithm [5]. However, 
+it is not clear if they use Johnson’s algorithm 
+specifically (no mention of it by name) or just 
+Dijkstra’s Algorithm from each node. This means 
+Floyd-Warshall’s Algorithm would support more types 
+of graph (with negative weights, for example). 
+Johnson’s Algorithm, after using Bellman-Ford to remove 
+all negative weight edges from the original input graph, 
+and after reweighting all of the edges, uses Dijkstra’s 
+Algorithm from every node in the graph to find the 
+shortest path to every other node in the graph. 
+This can stand to benefit from parallelism because the 
+Dijkstra’s Algorithm being used from each source 
+node can be run independently to generate the 
+shortest paths for all pairs.
+
+As proposed earlier, Johnson’s Algorithm may show better 
+performance than Floyd-Warshall’s Algorithm on sparse 
+graphs, but we wish to investigate if there are 
+implementation overheads associated with Johnson’s 
+that might hinder its ability to perform at its expected level.
+
+## The Challenge
+As computer systems lend themselves to supporting large 
+parallel workloads more and more, we must find a way 
+to take advantage of the hardware provided even when 
+an algorithm may not have an easily-parallelizable workload.
+
+# Challenges of Floyd-Warshall Algorithm Parallelism
+As seen above, Floyd-Warshall’s contains a triple 
+nested loop. It is immensely similar to matrix 
+multiplication, which has had a lot of work making 
+it fast in parallel. For each access on the inside 
+of the loops, we have three array accesses, a min 
+operation, an addition operation, and . This makes 
+even more likely to be memory bound than matrix 
+multiplication, because these operations are likely 
+faster than multiplication on a CPU. However, unlike 
+matrix multiplication, the outermost loop must run in 
+order, so only the two inner loops can be made parallel. 
+This is why the parallelism is more difficult for 
+the algorithm than it is for matrix multiplication.
+
+Blocking increases performance as it allows us to take 
+advantage of locality. This will cut down on memory read 
+time. The adjacency matrix is usually too large to fit 
+in the cache, but when we do manageable segments of it, 
+we can fit it in the cache. There will have to be some 
+experimentation to figure out which block sizes are ideal, 
+as too big of blocks will not get as much locality.
+
+For GPUs, locality will likely not be the primary issue. 
+We have many more cores and very fast memory, so the block 
+sizes will be much smaller to take advantage of these very 
+small cores. Arithmetic intensity should also be low, so synchronization costs will likely be the most expensive part of the operation.
+
+# Constraints of Floyd-Warshall Algorithm Parallelism
+Taking advantage of locality is the goal of our OpenMP 
+implementation. As such, the size of the L1 and L2 
+caches on the processors we are using will impact 
+how our performance scales (and when it stops scaling 
+well). We will want as many cores and their caches to 
+map to only a few blocks that just large enough. On 
+the GHC machines versus the Lateday machines, we will 
+be trying to reach maximum performance on machines 
+with different processors; this will be an interesting 
+point.
+
+The GPU will likely be limited by how much memory it 
+has. We will completely saturate it, but since memory 
+is so expensive for these devices, the amount of 
+memory will not compare to that available to high-performance 
+CPU implementations (one order of magnitude smaller).
+
+# Challenges of Johnson’s Algorithm Parallelism
+Determining the exact strategy to parallelize Johnson’s 
+Algorithm might prove to be a challenge because, relative 
+to Floyd-Warshall, the Johnson’s has many more dependencies 
+that could force a larger sequential proportion. The initial 
+step in Johnson’s is to run the Bellman-Ford Algorithm that
+modifies the graph to be appropriate for Dijkstra’s Algorithm. 
+Bellman-Ford can easily be parallelized, but this is only run 
+once in the algorithm so there is not much potential for speedup 
+in this area. In the Dijkstra’s Algorithm portion of the algorithm, 
+it would seem that the simplest step towards parallelism would be to 
+run Dijkstra’s Algorithm on each source on a different thread, as 
+the list of source vertices can act as 
+a list of tasks for the different threads. However, this would 
+make it difficult to judge work balance between threads as some 
+sources may experience more edges to explore than others, and 
+this is not very predictable with an arbitrary input graph.
+
+In a different approach, some sources spend time parallelizing 
+Dijkstra’s Algorithm itself, despite the sequential nature of 
+Dijkstra’s Algorithm. Though a foreseen challenge to this 
+could be that parallelizing Dijkstra would make the rest of 
+the algorithm sequential as we would proceed through every 
+source in some order. Determining whether such strategies are 
+actually more effective and worth implementing will be a challenging 
+decision. It is also foreseeable challenge that Dijkstra’s 
+Algorithm is a memory bound application, as it requires an 
+adjacency list representation of a graph, and it draws upon a 
+lot of information stored in memory to expand its exploration 
+frontier. Additionally, handling some form of Dijkstra’s 
+frontier as a priority queue definitely could present a 
+challenge to caching.
+
+# Constraints of Johnson’s Algorithm Parallelism
+The primary constraint for Johnson’s Algorithm on a CPU is 
+scheduling the different source nodes to different threads 
+when we need to run Dijkstra's from each source. A static 
+partition would be difficult to determine generally, while 
+a dynamic assignment might lead to significant overhead 
+costs as we experienced with OpenMP in previous assignments. 
+In the end, slowdown from a slightly unequal static assignment 
+might not warrant an improved dynamic assignment that carries 
+too much additional logic.
+
+In the context of a GPU this is slightly less of a challenge because 
+a GPU can create many parallel running threads and there may be 
+enough to cover an entire graph. Though with larger graphs it will 
+once again be difficult to create an optimal assignment. However, 
+the larger constraint of a GPU will be a memory constraint similar 
+to our discussion of Floyd-Warshall’s constraints on a GPU. Holding 
+as much of the graph as we can within the GPU will be smaller than 
+what a CPU held graph can hold as there is less memory available to the GPU.
+
+# Overview of Challenge
+In the end, we hope to learn which algorithm is better suited for 
+the handling the All Pairs Shortest Paths in a parallel setting 
+and in what practical application would one want to use one over 
+the other. We will explore how a GPU implementation compares to a 
+CPU implementation in terms of performance for two memory bound 
+algorithms, as well as how a GPU implementation may be limited 
+based on problem size. We will also figure out how much 
+state-of-the-art consumer CPU and GPU systems can do when 
+it comes to solving APSP.
+
+## Resources
+# Physical Resources
+We plan to use the GHC machines throughout most of our development.
+
+These machines have Intel Xeon Processor E5-1660 v4 and 32GB 
+of RAM. The processors are 8-core and support 16 threads via 
+Intel Hyper-Threading and AVX2 instructions, with a max 
+frequency of 3.80 GHz. They have a 32KB L1 data cache, 256KB L2 cache, and 20MB L3 cache.
+
+The machines also have a NVIDIA GeForce GTX 1080, which has 
+8GB GDDR5X memory and 2560 CUDA cores with a max frequency 
+of 1.733 GHz. Its memory bandwidth is 320 GB/sec and a 
+memory speed of 10 Gb/sec. [6]
+
+We also plan to use the Latedays machines for more reliable 
+benchmarking at the end of the project. The Lateday machines 
+have a queue system to remove user contention for CPU time. 
+While the GHC machines have a faster CPU and GPU, they are 
+available for everyone to use at any given time which is not a suitable environment for benchmarking.
+
+These machines have Intel Xeon Processor E5-2620 v3 and 16GB 
+of RAM. The processors are 6-core and support 12 threads via 
+Intel Hyper-Threading and AVX2 instructions, with a max 
+frequency of 2.40 GHz. They have a 32KB L1 data cache, 
+256KB L2 cache, and 15MB L3 cache.
+
+The machines also have a NVIDIA GeForce GTX Titan X, which has 
+12GB GDDR5 memory and 3072 CUDA cores with a max frequency of 
+1.705 GHz. Its memory bandwidth is 336.5 GB/sec and a memory 
+speed of 7.0 Gb/sec. [7] The tradeoff between having more memory 
+with a higher bandwidth, versus having more speed with the GTX 
+1080, will be interesting to see. Additionally, the GTX Titan X 
+has an older architecture (Maxwell) and CUDA version, while the 
+GTX 1080 has the Pascal architecture.
+
+# Software Resources
+The GHC machines use version 4.8.5 of the GCC compiler and version 8.0.61 of the NVIDIA CUDA compiler. The Latedays machine offers GCC version 4.9.2.
+
+We will use the Boost Library implementation of a Fibonacci Heap for our sequential and parallel Dijkstra’s Algorithm. It is a well-established library and a peer-reviewed implementation. [8] The Latedays machines do not have any installation of the Boost Libraries, so we will include it ourselves.
+
+# Implementation Resources
+We plan to make all of our parallel code from scratch using previous research as our guide. Tang provides our method of parallel blocked Floyd-Warshall [5]. Samer et al. provides us with our method of parallel Johnson’s Algorithm. [9]
+
+The sequential version of Floyd-Warshall will be easy to create from lecture notes from 15451 as it is just 4 lines of code. [1] A blocked sequential version can also be implemented from Tang’s work for the sake of comparison. The sequential version of Johnson’s Algorithm also can be extracted from the lecture notes. [1]
+
+## Goals and Deliverables
+
+Our implementation goals for the project:
+
+1. Floyd-Warshall’s Algorithm and Johnson’s Algorithm with OpenMP.
+2. For the CPU implementation, we do not expect to achieve linear speedup, as there are parallelism overheads, but we want a minimum speedup of (P/2)x speedup for both algorithms compared to their best sequential implementation, where P is the number of processors. This appears to be consistent with literature on the subject. [5]
+3. Floyd-Warshall’s Algorithm and Johnson’s Algorithm with CUDA.
+4. As a stretch goal, we would like to vectorize our CPU implementation of Floyd-Warshall with ISPC and observe any potential additional gains. Additionally, using ISPC’s task launch could be beneficial for Johnson’s Algorithm.
+
+# Analytical questions we want answer about these algorithms:
+
+1. How well does parallelism lend itself to these algorithms? In terms of algorithm restructuring and realized speedup compared to their sequential version. Additionally, what are the bottlenecks that limit these algorithms?
+2. In practice, when does Johnson’s Algorithm beat Floyd-Warshall? Does this match the asymptotic complexity bounds as we expected? Is there are higher-performing (or more parallel) data structure we can use to speedup Floyd-Warshall? This may depend on casing on the graph’s parameters (V and E).
+
+To present our findings, we will be able to graph the speedup our parallel implementations achieve. We can also show the different problem sizes and problem types (e.g. dense versus sparse graphs) each implementation can support realistically, with a run time within a reasonable amount of time. Then, we can pin each implementation against one another and really figure out the constraints of each system and the two algorithms. We hope to propose the most reasonable and practical algorithm to use in a large variety of cases.
+
+# Platform Choice
+The language that we are using is C++ with OpenMP and CUDA. We are using C++ because we want to make use of the Boost Library and because it has modern language features while still being very high-performance friendly. Additionally, we are using OpenMP and CUDA for our different models of computation because we believe they will perform well with the strategies that we have been studying in similar projects [4, 10]. OpenMP and CUDA make sense to design for in our situation as we also only have access to a single machine at a time, and will not be able to test our software on systems that have many computing nodes and would require a model and interface like MPI.
+
+## Schedule
+# April 18th (Project Checkpoint I):
+
+Graph generation code (supporting density parameter) finished. Benchmarking wrapper code finished. Debugging macros made and Makefile configured for C++ and OpenMP implementation. Regression and correctness checking code finished. Sequential implementations of Floyd-Warshall’s Algorithm and Johnson’s Algorithm finished.
+
+# April 25th (Project Checkpoint II):
+
+Floyd-Warshall’s Algorithm with OpenMP. Johnson’s Algorithm with OpenMP.
+
+# May 2nd:
+
+Floyd-Warshall’s Algorithm with CUDA. Johnson’s Algorithm with CUDA.
+
+# May 7th (Final Deadline):
+
+Leftover work. Parameter tweaking for each implementation. More interesting graphs to benchmark and compare with. Cohesive comparison of all benchmark results. Final report ready, best benchmarks taken.
+
+## References
+\[1\] [http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15451-f17/www/lectures/lec13-dp2.pdf](http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15451-f17/www/lectures/lec13-dp2.pdf)
+
+\[2\] [Floyd Warshall Algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
+
+\[3\] [Johnson's Algorithm](https://en.wikipedia.org/wiki/Johnson%27s_algorithm)
+
+\[4\] [https://stackoverflow.com/questions/504823/has-anyone-actually-implemented-a-fibonacci-he Ap-efficiently](https://stackoverflow.com/questions/504823/has-anyone-actually-implemented-a-fibonacci-he Ap-efficiently)
+
+\[5\] Tang, Peiyi. “Rapid development of parallel blocked all-pairs shortest paths code for multi-core computers.” IEEE SOUTHEASTCON 2014 (2014): 1-7.
+
+\[6\] [Geforce GTX 1080](https://www.nvidia.com/en-us/geforce/products/10series/geforce-gtx-1080/)
+
+\[7\] [GeForce GTX Titan X Specifications](https://www.geforce.com/hardware/desktop-gpus/geforce-gtx-titan-x/specifications)
+
+\[8\] [Boost Libary Fibonacci Heap](https://www.boost.org/doc/libs/1_66_0/doc/html/boost/heap/fibonacci_heap.html)
+
+\[9\] P. Samer, A. H. Sampaio, A. Milanés and S. Urrutia, "Designing a Multicore Graph Library," 2012 IEEE 10th International Symposium on Parallel and Distributed Processing with Applications, Leganes, 2012, pp. 721-728.
+
+\[10\] Taştan, Oğuzhan & Can Eryüksel, Oğul & Temizel, Alptekin. (2017). Accelerating Johnson's All-Pairs Shortest Paths Algorithm on GPU.
+
+# Additional Sources
+E. Solomonik, A. Buluç and J. Demmel, "Minimizing Communication in All-Pairs Shortest Paths," 2013 IEEE 27th International Symposium on Parallel and Distributed Processing, Boston, MA, 2013, pp. 548-559.
+
+T. Srinivasan, R. Balakrishnan, S. A. Gangadharan and V. Hayawardh, "A scalable parallelization of all-pairs shortest path algorithm for a high performance cluster environment," 2007 International Conference on Parallel and Distributed Systems, Hsinchu, 2007, pp. 1-8.
+
+https://engineering.purdue.edu/~eigenman/ECE563/ProjectPresentations/ParallelAll-PointsShortestPaths.pdf
+
+View the project proposal checkpoint Though disclaimer, a lot of goals have changed between the checkpoint and the actual proposal, so the checkpoint is not a representation of the expected product
+
+
+
+[15-418: Parallel Computer Architecture and Programming]: http://www.cs.cmu.edu/~418/
+[here]: https://github.com/moorejs/APSP-in-parallel

@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "Raspbot"
+date:   2017-12-15 2:16:53 -0500
+excerpt: "A semester long project for Mobile Robot Programming Laboratory"
+project: true
+
+comments: false 
+---
+
+A semester long project for the CMU class Mobile Robot Programming Laboratory
+
+My raspbot project was a semester long effort to program a small, sensor equipped robot to become capable of displaying advanced mobile capabilities. The construction of the robot and its design was handled by the professor, but the implementation of the software that powered and controlled the robot's movements were left upon myself and two other group members. Parts of the project were initially simple, such as implementing both feedforward and feedback control, to achieve accurate motion when directing a robot from point A to point B.
+
+Soon our robot became more capable of doing more complex curved movements that resulted minimal error. Additionally, our robot was provided with a laser sensor that rotated on the top of the robot, giving it a sense of distance relative to nearby objects. This is extremely useful for when we provided our robot with a map, and it could reference the map with its laser readings and resolve the error, instead of relying on simple, less accurate dead reckoning. The final performance evaluation for this project included having the robot perform multiple cubic spiral paths to pick up pallets in sequence, while having enough robustness to not fail under most circumstances.
+
+### Details
+
+An in depth look on the phases of developing the raspbot
+
+# Feedforward and Feedback Control:
+
+As a mobile robot, for the raspbot to be effective in any task, its an extremely high priority that the raspbot be able to move to where it desires to go. Accurately. If accurate movement is not achieved, state estimation error can propogate over time, and in a situation outside in the real world, such as autonomous driving, you wouldn't want your autonomous car to believe it's actually 10 ft to the left of where it actually is. Feedback control was implemented using the usual PID control system, and feedforward consisted of planning out the wheel velocities for the entire journey and executing these plans while traveling. Feedback control was very effective, but feedforward control gave an extra smoothness to the raspbot's movements.
+
+# Smart Luggage: 
+
+The first small project using the rotating sensor on the top of the raspbot. Given that the user is standing in front of the raspbot when it initializes, the raspbot follows the user around while maintaining a fixed distance. This was accomlished by converting the sensor readings into data on the location of a mass of range readings (likely to be the user) and using feedback control to control the robot to reduce its error distance to the user. Filtered out sensor noise to reduce misinterpreting where the user was, but as this was an early stage of the project, another person or maybe a chair leg could be interpreted as the user and drive the raspbot off course.
+
+# Executing Arbitrary Trajectory (Gracefully): 
+
+An important part of a mobile robot is of course for it to be be directed to go anywhere. Though this can be accomplished by a series of turns and forward motions, a mobile robot will appear far more "intelligent" if it is able to move to its goal in a smooth motion. In our implementation, we had the robot reach its goal through moving along a cubic spiral. This movement was stored in a pregenerated lookup table as it's too expensive to generate these arbitrary motions during runtime. As a robot is given a change in state, say move to a point relative to its pose by 2 feet on the x axis and 1 foot on the y axis, it finds its appropriate cubic spiral, scales it to match the desired pose, and executes the movement relying on feedforward and feedback control as previously described. With this the raspbot can appear more intelligent by moving along paths less awkwardly.
+
+# Laser Sensor Localization: 
+
+Though dead-reckoning state estimation by taking measurements of the wheels rotation was an effective way to get a decent estimate for the raspbot's pose relative to the world, it had many limitations when placed in more difficult situations. For example, it is impossible for the raspbot to perfectly relate its wheelspin to its location, as the wheels may slip on the ground or the wheels may constantly be changing speeds and the system cannot sample quickly enough. In either case, error increases over time, and cannot be resolved without intervention. This intervention comes in the form of the sensor on the top of the raspbot, the laser sensor. Spinning at 2 Hz, the sensor can take quick assessments of the surroundings and report them to the raspbot. In this course we did not implement any mapping mechanisms, but we gave the raspbot the ability to localize. So, giving it a map of its environment, the raspbot could resolve the error between its pose and the actual position determined by the laser sensor. This gave the raspbot the ability to travel longer durations, as it could continously resolve state estimation error.
+
+# Pallet Identification and Retrieval: 
+
+Attached on the front of the raspbot is a forklift that had remained unused for most of the semester. The forklift's purpose was to pick up small pallets and hold them as the raspbot carried them to a target location. This part of the project also used the raspbot's rotating laser sensor. In this situation, the sensor was used to identify the target pallets. A particular challenge in this section was that to the raspbot, a pallet was a linear series of points, but so was a wall. Making sure the raspbot could differentiate between a pallet and a wall, especially if the pallet was placed parallel and in close proximity to the wall was difficult, but was made possible by using eigen values to derive the width of a spotted object. So where a wall is exceptionally wide from the robot's perspective, a sail has a short width and the raspbot can then understand the width of a sail and identify a sail appropriately. Retrieval respresented the culmination of the previous checkpoints, as to get the forks underneath the pallet, the raspbot had to keep an accurate pose with localization, and also had to be able to execute arbitrary paths to wherever the sail may be.
+
+# Final Competition: 
+
+The final assessment for the class was a competition between different group's raspbots. With 6 sails in the middle, the two teams raspbots would compete to see whose implementation was more effective and robust when racing to acquire as many of the sails as possible. This involved strategies such as cranking up the raspbot's speed to make it reach sails as fast as possible, and also interesting decisions on which sails to take first.
+

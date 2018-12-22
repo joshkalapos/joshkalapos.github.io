@@ -1,37 +1,63 @@
 ---
 layout: page
-title: About the Theme
-tags: [about, Jekyll, theme, moon]
-date: 2016-03-21
+title: About Me
+date: 2018-12-21
 comments: false
 ---
-    
-<center><a href="http://taylantatli.github.io/Moon"><b>Moon</b></a> is a minimal, one column jekyll theme.</center>
 
-## Features
-* Minimal, you can focus on your content
-* Responsive
-* Disqus integration
-* Syntax highlighting
-* Optional post image
-* Social icons
-* Page for sharing projects
-* Optional background image
-* Simple navigation menu
-* MathJax support
+I was born in Toledo, OH but grew up in Pittsburgh, PA.
+There I graduated from Mt. Lebanon High School.
 
-## Preview
+## Activities
 
-{% capture images %}
-    https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png
-    https://cloud.githubusercontent.com/assets/754514/14509716/61ac6c8e-01d6-11e6-879f-8308883de790.png
-{% endcapture %}
-{% include gallery images=images caption="Screenshots of Moon Theme" cols=2 %}
+# Cross Country and Track
 
-See a [live version of Moon](http://taylantatli.github.io/Moon) hosted on GitHub.
+At school I also run for the
+[cross country team](http://athletics.cmu.edu/sports/mxc/index)
+in the fall and the
+[track and field team](http://athletics.cmu.edu/sports/mtrack/index)
+in the winter/spring. Every day of the week almost year round I am training
+to become a faster competitor.
 
-## Getting Started
 
-To learn how to install and use this theme check out the [Setup Guide](http://taylantatli.me/Moon/moon-theme/) for more information.
-      
-[Install Moon](https://github.com/TaylanTatli/Moon){: .btn}
+# Star Wars Stuco Instructor
+
+As part of the [Student College program](https://www.cmu.edu/stuco/) at CMU I
+coteach the course Star Wars: The Course Awakens for other students at the
+university.
+
+I had taken the course my freshman fall and inherited it a year later
+when the former instructors graduated. Since then, my friends and I have taught this
+course to classes averaging around 15 students for the Spring 18, Fall 18 and
+now the Spring 19 semesters. The curriculum is primarily studying the
+inspirations that led to the creation of Star Wars and then also the effects
+that it has had on culture following each movie release
+
+<img src="/assets/img/about/StarWars_Stuco.png">
+
+## Education
+
+# Carnegie Mellon University
+
+Currently I am studying Computer Science at Carnegie Mellon University
+with a minor in Robotics
+
+**Relevant Coursework**
+
+- 15-418 Parallel Computing Architecture and Programming
+- 15-210 Parallel and Sequential Data Structures and Algorithms
+- 15-251 Great Ideas in Theoretical Computer Science
+- 15-213 Introduction to Computer Systems
+- 15-462 Computer Graphics
+
+*Robotics*
+- 16-299 Introduction to Feedback Control Systems
+- 16-362 Mobile Robot Programming Laboratory
+- 16-384 Robot Kinematic and Dynamics
+
+*Mathematics*
+- 21-241 Matrices and Linear Transformations
+- 21-259 Calculus in 3D
+- 36-217 Probability and Random Processes
+
+

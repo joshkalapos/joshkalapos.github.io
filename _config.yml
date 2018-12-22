@@ -1,14 +1,14 @@
 # Site
-title:              Moon
-bio:                'Minimal, one column jekyll theme.'
-description:        "Moon is a minimal, one column jekyll theme for your blog."
+title:              Josh Kalapos
+bio:                'CS Junior at Carnegie Mellon University'
+description:        "I'm Josh, a junior CS major at Carnegie Mellon University"
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
-url:                https://taylantatli.github.io/Moon
+#url:                https://taylantatli.github.io/Moon
 
 # Jekyll
 permalink:          /:title/
@@ -37,23 +37,23 @@ disqus_shortname:   taylantatli
   #ad-client:
   #ad-slot:
 #bing-verify:
-#email:
-twitter:            username
-facebook:           username
-github-url:         username
+email:              jkalapos@andrew.cmu.edu
+#twitter:            username
+facebook:           josh.kalapos
+github-url:         joshkalapos
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
-instagram:          username
+instagram:          joshkalapos
 #lastfm:            username
 #tumblr:            username
 #medium:            '@username'
 #pinterest:         username
 #foursquare:        username
-steam:              username
+#steam:              username
 #dribbble:          username
 #youtube:           username
-#youtube-channel:   channel
+#youtube-channel:   Joshua Kalapos
 #soundcloud:        username
 #weibo:             username
 #flickr:            username
