@@ -8,24 +8,27 @@ project: true
 comments: false
 ---
 
-A final project for [15-418: Parallel Computer Architecture and Programming]
+Together, Jared Moore and I implemented an exploration of parallel applications on
+algorithms that solve All Pairs Shortest Paths (APSP). APSP is the task in which you 
+are given a graph and then asked to return the shortest paths between all vertices. 
 
-Jared Moore (jmoore1) and Josh Kalapos (jkalapos)
+This project took place over the last month of the spring 2018 semester for the class [15-418: Parallel Computer Architecture and Programming](http://www.cs.cmu.edu/~418/)
 
-View our project on github [here]
+The full project report site is actually [here](https://moorejs.github.io/APSP-in-parallel/) and the code is kept [here](https://github.com/moorejs/APSP-in-parallel)
 
-View [Checkpoint 1](/assets/jkalapos_jmoore1_checkpoint_1.pdf)
+View [Checkpoint 1](/assets/jkalapos_jmoore1_checkpoint_1.pdf) or view [Checkpoint 2](/assets/jkalapos_jmoore1_checkpoint_2.pdf)
 
-View [Checkpoint 2](/assets/jkalapos_jmoore1_checkpoint_2.pdf)
+Here is the proposal that we initially wrote where we set some goals for ourselves 
+and explored the challenges that we may face during the project.
 
-### Project Proposal
-## Summary
+## Project Proposal
+### Summary
 We are going to implement Johnson’s and Floyd-Warshall’s Algorithms for All Pairs Shortest Paths (APSP) using 
 OpenMP and CUDA, comparing their performances in these different models of parallelism in order to study 
 which algorithm performs better in these varying contexts.
 
 ## Background
-# Overview
+### Overview
 We plan to investigate two graph search algorithms for solving all-pairs shortest 
 paths: the Floyd-Warshall Algorithm and Johnson’s Algorithm. The goal of 
 these algorithms is to find the shortest path that between any two pairs of nodes. 
@@ -44,7 +47,7 @@ worst-case performance of O(V2log(V) + VE), with V being the number of vertices
 
 Conventional wisdom tells us that Floyd-Warshall’s Algorithm should only be better when graphs are dense (E is large relative to V). We want to find practical bounds to this, as we speculate that the data-structure overhead for Johnson’s Algorithm may be notable.
 
-# Floyd-Warshall Background
+### Floyd-Warshall Background
 An interesting strategy to obtain speedup is to divide the distance matrix W into 
 smaller blocked matrices A in order to increase cache locality. The general 
 algorithm for Floyd-Warshall’s Algorithm remains the same, except Floyd-Warshall 
@@ -56,7 +59,12 @@ strategy opens up clear benefit from parallelism, and we wish to explore how
 effectively this problem is improved through just adding blocking parallelism 
 to Floyd-Warshall. [5]
 
-![Figure 1: Blocked Floyd Warshall](/assets/img/apsp/APSP_Fig1.png) | ![Figure 2: Visualizing blocking on the matrix W](/assets/img/apsp/APSP_Fig2.png) | ![Figure 3: Parallel Blocked Floyd-Warshall](/assets/img/apsp/APSP_Fig3.png)
+<figure class="third"> 
+  <a href="/assets/img/apsp/APSP_Fig1.png"><img src="/assets/img/apsp/APSP_Fig1.png"></a>
+  <a href="/assets/img/apsp/APSP_Fig2.png"><img src="/assets/img/apsp/APSP_Fig2.png"></a>
+  <a href="/assets/img/apsp/APSP_Fig3.png"><img src="/assets/img/apsp/APSP_Fig3.png"></a>
+  <figcaption>Blocked Floyd Warshall, Vizualization of blocking on matrix W, and Parallel Blocked Floyd Warshal</figcaption>
+</figure>
 
 This method of blocking benefits greatly from parallel strategies using OpenMP, 
 as with a shared memory address space the results can be written for all threads 
@@ -69,7 +77,7 @@ It would be interesting to map this problem to a GPU setting and
 observe how much speedup the GPU can produce even when compared 
 to an OpenMP implementation on the CPU.
 
-# Johnson’s Algorithm Background
+### Johnson’s Algorithm Background
 By exploring the performance differences between Johnson’s 
 Algorithm and Floyd-Warshall’s Algorithm, Holmes et al. 
 show results that indicate Johnson’s Algorithm has 
@@ -95,13 +103,13 @@ graphs, but we wish to investigate if there are
 implementation overheads associated with Johnson’s 
 that might hinder its ability to perform at its expected level.
 
-## The Challenge
+### The Challenge
 As computer systems lend themselves to supporting large 
 parallel workloads more and more, we must find a way 
 to take advantage of the hardware provided even when 
 an algorithm may not have an easily-parallelizable workload.
 
-# Challenges of Floyd-Warshall Algorithm Parallelism
+### Challenges of Floyd-Warshall Algorithm Parallelism
 As seen above, Floyd-Warshall’s contains a triple 
 nested loop. It is immensely similar to matrix 
 multiplication, which has had a lot of work making 
@@ -129,7 +137,7 @@ We have many more cores and very fast memory, so the block
 sizes will be much smaller to take advantage of these very 
 small cores. Arithmetic intensity should also be low, so synchronization costs will likely be the most expensive part of the operation.
 
-# Constraints of Floyd-Warshall Algorithm Parallelism
+### Constraints of Floyd-Warshall Algorithm Parallelism
 Taking advantage of locality is the goal of our OpenMP 
 implementation. As such, the size of the L1 and L2 
 caches on the processors we are using will impact 
@@ -147,7 +155,7 @@ is so expensive for these devices, the amount of
 memory will not compare to that available to high-performance 
 CPU implementations (one order of magnitude smaller).
 
-# Challenges of Johnson’s Algorithm Parallelism
+### Challenges of Johnson’s Algorithm Parallelism
 Determining the exact strategy to parallelize Johnson’s 
 Algorithm might prove to be a challenge because, relative 
 to Floyd-Warshall, the Johnson’s has many more dependencies 
@@ -180,7 +188,7 @@ frontier. Additionally, handling some form of Dijkstra’s
 frontier as a priority queue definitely could present a 
 challenge to caching.
 
-# Constraints of Johnson’s Algorithm Parallelism
+### Constraints of Johnson’s Algorithm Parallelism
 The primary constraint for Johnson’s Algorithm on a CPU is 
 scheduling the different source nodes to different threads 
 when we need to run Dijkstra's from each source. A static 
@@ -200,7 +208,7 @@ to our discussion of Floyd-Warshall’s constraints on a GPU. Holding
 as much of the graph as we can within the GPU will be smaller than 
 what a CPU held graph can hold as there is less memory available to the GPU.
 
-# Overview of Challenge
+### Overview of Challenge
 In the end, we hope to learn which algorithm is better suited for 
 the handling the All Pairs Shortest Paths in a parallel setting 
 and in what practical application would one want to use one over 
@@ -212,7 +220,7 @@ state-of-the-art consumer CPU and GPU systems can do when
 it comes to solving APSP.
 
 ## Resources
-# Physical Resources
+### Physical Resources
 We plan to use the GHC machines throughout most of our development.
 
 These machines have Intel Xeon Processor E5-1660 v4 and 32GB 
@@ -246,12 +254,12 @@ with a higher bandwidth, versus having more speed with the GTX
 has an older architecture (Maxwell) and CUDA version, while the 
 GTX 1080 has the Pascal architecture.
 
-# Software Resources
+### Software Resources
 The GHC machines use version 4.8.5 of the GCC compiler and version 8.0.61 of the NVIDIA CUDA compiler. The Latedays machine offers GCC version 4.9.2.
 
 We will use the Boost Library implementation of a Fibonacci Heap for our sequential and parallel Dijkstra’s Algorithm. It is a well-established library and a peer-reviewed implementation. [8] The Latedays machines do not have any installation of the Boost Libraries, so we will include it ourselves.
 
-# Implementation Resources
+### Implementation Resources
 We plan to make all of our parallel code from scratch using previous research as our guide. Tang provides our method of parallel blocked Floyd-Warshall [5]. Samer et al. provides us with our method of parallel Johnson’s Algorithm. [9]
 
 The sequential version of Floyd-Warshall will be easy to create from lecture notes from 15451 as it is just 4 lines of code. [1] A blocked sequential version can also be implemented from Tang’s work for the sake of comparison. The sequential version of Johnson’s Algorithm also can be extracted from the lecture notes. [1]
@@ -265,30 +273,30 @@ Our implementation goals for the project:
 3. Floyd-Warshall’s Algorithm and Johnson’s Algorithm with CUDA.
 4. As a stretch goal, we would like to vectorize our CPU implementation of Floyd-Warshall with ISPC and observe any potential additional gains. Additionally, using ISPC’s task launch could be beneficial for Johnson’s Algorithm.
 
-# Analytical questions we want answer about these algorithms:
+### Analytical questions we want answer about these algorithms:
 
 1. How well does parallelism lend itself to these algorithms? In terms of algorithm restructuring and realized speedup compared to their sequential version. Additionally, what are the bottlenecks that limit these algorithms?
 2. In practice, when does Johnson’s Algorithm beat Floyd-Warshall? Does this match the asymptotic complexity bounds as we expected? Is there are higher-performing (or more parallel) data structure we can use to speedup Floyd-Warshall? This may depend on casing on the graph’s parameters (V and E).
 
 To present our findings, we will be able to graph the speedup our parallel implementations achieve. We can also show the different problem sizes and problem types (e.g. dense versus sparse graphs) each implementation can support realistically, with a run time within a reasonable amount of time. Then, we can pin each implementation against one another and really figure out the constraints of each system and the two algorithms. We hope to propose the most reasonable and practical algorithm to use in a large variety of cases.
 
-# Platform Choice
+### Platform Choice
 The language that we are using is C++ with OpenMP and CUDA. We are using C++ because we want to make use of the Boost Library and because it has modern language features while still being very high-performance friendly. Additionally, we are using OpenMP and CUDA for our different models of computation because we believe they will perform well with the strategies that we have been studying in similar projects [4, 10]. OpenMP and CUDA make sense to design for in our situation as we also only have access to a single machine at a time, and will not be able to test our software on systems that have many computing nodes and would require a model and interface like MPI.
 
 ## Schedule
-# April 18th (Project Checkpoint I):
+### April 18th (Project Checkpoint I):
 
 Graph generation code (supporting density parameter) finished. Benchmarking wrapper code finished. Debugging macros made and Makefile configured for C++ and OpenMP implementation. Regression and correctness checking code finished. Sequential implementations of Floyd-Warshall’s Algorithm and Johnson’s Algorithm finished.
 
-# April 25th (Project Checkpoint II):
+### April 25th (Project Checkpoint II):
 
 Floyd-Warshall’s Algorithm with OpenMP. Johnson’s Algorithm with OpenMP.
 
-# May 2nd:
+### May 2nd:
 
 Floyd-Warshall’s Algorithm with CUDA. Johnson’s Algorithm with CUDA.
 
-# May 7th (Final Deadline):
+### May 7th (Final Deadline):
 
 Leftover work. Parameter tweaking for each implementation. More interesting graphs to benchmark and compare with. Cohesive comparison of all benchmark results. Final report ready, best benchmarks taken.
 
@@ -313,7 +321,7 @@ Leftover work. Parameter tweaking for each implementation. More interesting grap
 
 \[10\] Taştan, Oğuzhan & Can Eryüksel, Oğul & Temizel, Alptekin. (2017). Accelerating Johnson's All-Pairs Shortest Paths Algorithm on GPU.
 
-# Additional Sources
+### Additional Sources
 E. Solomonik, A. Buluç and J. Demmel, "Minimizing Communication in All-Pairs Shortest Paths," 2013 IEEE 27th International Symposium on Parallel and Distributed Processing, Boston, MA, 2013, pp. 548-559.
 
 T. Srinivasan, R. Balakrishnan, S. A. Gangadharan and V. Hayawardh, "A scalable parallelization of all-pairs shortest path algorithm for a high performance cluster environment," 2007 International Conference on Parallel and Distributed Systems, Hsinchu, 2007, pp. 1-8.
@@ -322,7 +330,3 @@ https://engineering.purdue.edu/~eigenman/ECE563/ProjectPresentations/ParallelAll
 
 View the project proposal checkpoint Though disclaimer, a lot of goals have changed between the checkpoint and the actual proposal, so the checkpoint is not a representation of the expected product
 
-
-
-[15-418: Parallel Computer Architecture and Programming]: http://www.cs.cmu.edu/~418/
-[here]: https://github.com/moorejs/APSP-in-parallel

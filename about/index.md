@@ -33,7 +33,7 @@ other sites out there, but this one is ours.
 <figure class="half">
   <a href="/assets/img/about/rowan2018.jpg"><img src="/assets/img/about/rowan2018.jpg"></a>
   <a href="/assets/img/about/regionals2018.jpg"><img src="/assets/img/about/regionals2018.jpg"></a>
-  <figcaption>Rowan Invitational 2018 and Regionals 2018</figcaption>
+  <figcaption>Rowan Invitational 2018 and NCAA Mideast Regionals 2018</figcaption>
 </figure>
 
 ## Star Wars Stuco Instructor
@@ -58,16 +58,17 @@ that it has had on culture following each movie release
 
 ## Carnegie Mellon University
 
-Currently I am studying Computer Science at Carnegie Mellon University
-with a minor in Robotics
+Currently I am majoring in Computer Science with a minor in Robotics
 
-**Relevant Coursework**
+***Relevant Coursework***
 
-- 15-418 Parallel Computing Architecture and Programming
-- 15-210 Parallel and Sequential Data Structures and Algorithms
-- 15-251 Great Ideas in Theoretical Computer Science
-- 15-213 Introduction to Computer Systems
+*Computer Science*
+
 - 15-462 Computer Graphics
+- 15-418 Parallel Computing Architecture and Programming
+- 15-213 Introduction to Computer Systems
+- 15-251 Great Ideas in Theoretical Computer Science
+- 15-210 Parallel and Sequential Data Structures and Algorithms
 
 *Robotics*
 - 16-299 Introduction to Feedback Control Systems

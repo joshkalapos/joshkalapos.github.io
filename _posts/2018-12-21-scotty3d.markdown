@@ -8,13 +8,14 @@ project: true
 comments: false
 ---
 
+## Overview
 Scotty3D is a full-featured software package for 3D modeling, 
 rendering, and animation. This was an ongoing course project 
 for 15-462 Computer Graphics
 
 The project came in three parts, Mesh Edit, Pathtracer, and Animation
 
-# Mesh Edit
+## Mesh Edit
 
 <figure>
   <a href="/assets/img/scotty3d/xwing.png">
@@ -55,7 +56,7 @@ local edits so I also built some global editing functions
 With just these functions I was able to take the original cube collada
 file and massage the mesh into the X-Wing pictured above. 
 
-# Pathtracer
+## Pathtracer
 
 The second part of Scotty3D's goal was to create a photorealistic 
 renderer. Basically this whole process was an application of the 
@@ -104,7 +105,7 @@ materials objects can take on their surface. This includes surfaces
 such as glass or a perfect mirror. Additionally, pathtracer had
 the ability to simulate environmental lighting.
 
-# Animation
+## Animation
 
 The final piece of Scotty3D was adding an animation mode.
 This included three different animation modes, spline interpolation, 
@@ -138,3 +139,5 @@ frame by frame for 30/60 fps. So this video uses much faster
 rasterization. 
 
 {% include youtube.html id="zDgj82fOrgU" %}
+
+Work for this comes from the assignments in the class [15-462 Computer Graphics](http://15462.courses.cs.cmu.edu/fall2018/)

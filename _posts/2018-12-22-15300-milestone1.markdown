@@ -1,0 +1,26 @@
+---
+layout: post
+title: "15-300 Project Milestone 1"
+date: 2018-12-22
+excerpt: "First milestone report at the end of 15-300 Fall 2018"
+research: true
+
+comments: false
+---
+
+## Major Changes
+
+Since my project proposal, there has not been any major changes to my goals or the implementation of my project. Currently, everything is still the same.
+
+## What I Have Accomplished So Far
+So far, I have installed the Boundary First Flattening repo from Github and gotten it working on my machine. Additionally, I have read background material that Professor Crane had provided for me at our last meeting. These readings I feel have given me some more inspiration for more papers to read over break, and also different subjects to study the fundamentals of.
+
+## Surprises
+Fortunately, there has been no bad major surprises so far in this project. I wouldn’t call these surprises because I knew it was coming, but reading about intrinsic triangulations and polyhedral unfolding (Recommended readings by Crane) and then then thinking about them in terms of the project and from my computer science background has felt kind of weird at first. Mainly because geometry has not been something I have deeply thought about since freshman year in high school and it was just recently brought back to me in 15-462 Computer Graphics this semester. Though already after my initial work for this milestone the area is becoming more familiar primarily because geometry to me is pretty intuitive.
+
+## Revisions to my 15-400 Milestones:
+As my progress on the first milestone has been good, I don’t believe there is any reason to change my future milestones yet. Hopefully this winter break I can dedicate a decent amount of time to this, while also relaxing because it’s winter break.
+
+## Resources Needed:
+All the resources I need I have already, because I only need a computer. Though it’s unfortunate but the MacOS update broke all of my dev tools and I’ve been slowly trying to fix them as they show up as broken. So maybe regaining control of my macbook completely will be the resource I will work on acquiring.
+

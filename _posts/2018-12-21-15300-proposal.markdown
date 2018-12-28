@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "15-300 Project Proposal"
-date: 2018-12-22
+date: 2018-12-21
 excerpt: "Project proposal for research to be done in 15-400 come
 Spring 2018"
 research: true
@@ -11,12 +11,16 @@ comments: false
 
 # Description
 
-I will be working with Professor Keenan Crane and his graduate 
-student Rohan Sawhney in the CMU Graphics Lab on improving 
-Boundary First Flattening, an open source software that maps 
-3D surfaces to a 2D domain. Specifically, I will be researching 
-techniques that will improve the space efficiency of the generated 
-2D atlas, while avoiding the creation of mapped overlaps.
+I will be working with
+[Professor Keenan Crane](https://www.cs.cmu.edu/~kmcrane/) 
+and his graduate student 
+[Rohan Sawhney](http://rohansawhney.io/) 
+in the CMU Graphics Lab on improving 
+[Boundary First Flattening](https://geometrycollective.github.io/boundary-first-flattening/), 
+an open source software that maps 3D surfaces to a 2D domain. 
+Specifically, I will be researching techniques that will improve the 
+space efficiency of the generated 2D atlas, while avoiding the 
+creation of mapped overlaps.
 
 The proposed research is meant to be an feature of the open source 
 software Boundary First Flattening, which is a surface parameterization 

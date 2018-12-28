@@ -34,7 +34,7 @@ Projectiles are sprites and are the arrows that the player and AI shoot at each 
 The player class handles only the init of the character and the update of its movements and graphics. Within the game class is the spawning of the player. By default the player will spawn in the top left of the screen. But, in custom map mode, the user can decide to cover up the top left of the screen. Then, the spawning system will seek out the next open place on the map and spawn the player there. The player’s actions are controlled by the key events. Where movement is controlled by the arrow keys, spacebar to shoot.
 
 <figure>
- <a href="/assets/img/archerarena/AAPlayerarrow.png"><img src="/assets/img/archerarena/AAPlayerarrow.png"></a>
+ <a href="/assets/img/archerarena/AAplayerarrow.png"><img src="/assets/img/archerarena/AAplayerarrow.png"></a>
  <figcaption>Sprite Sheet for Player Animation</figcaption>
 </figure>
 
