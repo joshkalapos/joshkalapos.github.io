@@ -51,7 +51,7 @@ local edits so I also built some global editing functions
 	/assets/img/scotty3d/subdivide-catmull2.png
 	/assets/img/scotty3d/subdivide-loop.png	
 {% endcapture %}
-{% include gallery images=images caption="Left to right: Catmull-Clark applied once, Catmull-Clark repeatedly applied, Subdivide Linear repeatedly applied" cols=3 %}
+{% include gallery images=images caption="Left to right: Catmull-Clark applied once, Catmull-Clark repeatedly applied, Loop-Subdivision repeatedly applied" cols=3 %}
 
 With just these functions I was able to take the original cube collada
 file and massage the mesh into the X-Wing pictured above. 
@@ -140,4 +140,4 @@ rasterization.
 
 {% include youtube.html id="zDgj82fOrgU" %}
 
-Work for this comes from the assignments in the class [15-462 Computer Graphics](http://15462.courses.cs.cmu.edu/fall2018/)
+Work for this project comes from the assignments in the class [15-462 Computer Graphics](http://15462.courses.cs.cmu.edu/fall2018/)

@@ -8,16 +8,52 @@ project: true
 comments: false
 ---
 
-Final project for CMU course I took in the fall 2016 semester, 15-112 Fundamentals of Programming
+Final project for CMU course I took in the fall 2016 semester, 
+15-112 Fundamentals of Programming. The majority of this page is a description of my project that I wrote right after its completion.
 
 {% include youtube.html id="L-PRv2UXZ3o" %}
 
 ## Survival Mode
 # AI and Graphs
-My term project is a 2.5d shooter where the player fights against AI. In the game there are two different sets of AI, which are defined in their own classes, though both inheriting from a parent AI class. EasyAI and MediumAI. The EasyAI's functionality relies mostly on timers and rectangle intersections. For movement it relies on a timer that changes the AI's direction ever couple seconds. In order for the EasyAI to avoid running into obstacles, it has a rectangle created in front of it that detects an intersection with a wall. When such an intersection occurs, the EasyAI skips the timer and changes direction. In this way the EasyAI wanders around the map randomly until, by a similar process using rectangles, finds the player and begins shooting arrows. To avoid shooting unnecessarily, the AI checks to see if there is a wall in between itself and the player. If there is, it won’t shoot. The EasyAI has one health and will die when hit by an arrow
+My term project is a 2.5d shooter where the player fights against waves
+of computer enemies. In the game there are two different sets of enemies, 
+which are defined in their own classes, though both inheriting from a 
+parent AI class. EasyAI and MediumAI. The EasyAI's functionality relies 
+mostly on timers and rectangle intersections. For movement it relies 
+on a timer that changes the AI's direction ever couple seconds. In order 
+for the EasyAI to avoid running into obstacles, it has a rectangle 
+created in front of it that detects an intersection with a wall. When 
+such an intersection occurs, the EasyAI skips the timer and changes 
+direction. In this way the EasyAI wanders around the map randomly until, 
+by a similar process using rectangles, finds the player and begins shooting 
+arrows. To avoid shooting unnecessarily, the AI checks to see if there 
+is a wall in between itself and the player. If there is, it won’t shoot. 
+The EasyAI has one health and will die when hit by an arrow
 
 # Graphs
-The MediumAI, rather than wandering around aimlessly, uses a generated graph and Breadth First Search to seek out the player. In this process the MediumAI first sees if it can attack the player, using the same rectangle process as the EasyAI. If it is not in range, then it follows the path set up by the BFS method. The BFS method uses graph theory to determine the shortest route to the player while also considering obstacles. This is accomplished by generating a graph that has repeated nodes layered over the map. Nodes are placed in a regular order and are not placed when they lie within a obstacle. Additionally, edges are formed between nodes that are adjacent to each other in the x and y direction. Through this graph the MediumAI can use the player’s position on the graph and then its own position to determine the best path and make a move. It repeats this process of movement and attack until the player is dead. The only break in this process is when the player shoots an arrow towards the MediumAI. The MediumAI has a set of rectangles that lie in all 4 directions that will detect a player’s arrow if it intersects with one of them. First the “dangerDetector” determines if the arrow is headed towards the mediumAI. If it is, then the MediumAI will do its best to dodge the arrow by moving out of the way. Avoiding danger takes priority over pursuing the player and attacking and will be done first. The MediumAI has two health and will lose part of its armor when hit by an arrow. Note: By pressing g during survival, the map’s graph is displayed. By pressing s, the path of the mediumAI is shown.
+The MediumAI, rather than wandering around aimlessly, uses a generated 
+graph and Breadth First Search to seek out the player. In this process 
+the MediumAI first sees if it can attack the player, using the same 
+rectangle process as the EasyAI. If it is not in range, then it follows 
+the path set up by the BFS method. The BFS method uses graph theory to 
+determine the shortest route to the player while also considering 
+obstacles. This is accomplished by generating a graph that has repeated 
+nodes layered over the map. Nodes are placed in a regular order and are 
+not placed when they lie within a obstacle. Additionally, edges are formed 
+between nodes that are adjacent to each other in the x and y direction. 
+Through this graph the MediumAI can use the player’s position on the 
+graph and then its own position to determine the best path and make a 
+move. It repeats this process of movement and attack until the player 
+is dead. The only break in this process is when the player shoots an 
+arrow towards the MediumAI. The MediumAI has a set of rectangles that 
+lie in all 4 directions that will detect a player’s arrow if it 
+intersects with one of them. First the “dangerDetector” determines 
+if the arrow is headed towards the mediumAI. If it is, then the 
+MediumAI will do its best to dodge the arrow by moving out of the way. 
+Avoiding danger takes priority over pursuing the player and attacking and 
+will be done first. The MediumAI has two health and will lose part of its 
+armor when hit by an arrow. Note: By pressing g during survival, the map’s 
+graph is displayed. By pressing s, the path of the mediumAI is shown.
 
 <figure>
   <a href="/assets/img/archerarena/AAgraph.png"><img src="/assets/img/archerarena/AAgraph.png"></a>

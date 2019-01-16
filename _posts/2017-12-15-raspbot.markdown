@@ -8,7 +8,9 @@ project: true
 comments: false 
 ---
 
-![raspbot](/assets/img/raspbot/raspbot.png)
+<figure>
+<a href="/assets/img/raspbot/raspbot.png"><img src="/assets/img/raspbot/raspbot.png"></a>
+</figure>
 
 A semester long project for the CMU class Mobile Robot Programming Laboratory
 

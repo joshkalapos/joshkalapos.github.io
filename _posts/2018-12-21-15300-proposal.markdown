@@ -108,7 +108,7 @@ the final goal througout the semester.
 ### February 1st, 2019
 One of the problems that we described is that some parameterizations 
 introduce overlaps where different points on the 3D surface get mapped 
-to the same location on the 2D atlas. By Febryary 1st, I hope to 
+to the same location on the 2D atlas. By February 1st, I hope to 
 have some program that takes in an atlas and the 3D source and 
 identifies any overlaps that were created. Furthermore, the program 
 should be able to fix these overlaps.
