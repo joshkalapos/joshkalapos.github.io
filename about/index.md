@@ -62,18 +62,27 @@ Currently I am majoring in Computer Science with a minor in Robotics
 
 ***Relevant Coursework***
 
+**Classes this semester**
+
+- [16-311 Introduction to Robotics](http://generalrobotics.org)
+- [15-458 Discrete Differential Geometry](http://brickisland.net/DDGSpring2019/)
+- 15-400 Research Practicum in Computer Science
+- 82-171 Elementrary Japanese I
+
+**Previous Semesters**
+
 *Computer Science*
 
-- 15-462 Computer Graphics
-- 15-418 Parallel Computing Architecture and Programming
-- 15-213 Introduction to Computer Systems
-- 15-251 Great Ideas in Theoretical Computer Science
-- 15-210 Parallel and Sequential Data Structures and Algorithms
+- [15-462 Computer Graphics](http://15462.courses.cs.cmu.edu/fall2018/home)
+- [15-418 Parallel Computing Architecture and Programming](https://www.cs.cmu.edu/afs/cs/academic/class/15418-s18/www/)
+- [15-213 Introduction to Computer Systems](https://www.cs.cmu.edu/afs/cs/academic/class/15213-f17/www/)
+- [15-251 Great Ideas in Theoretical Computer Science](http://www.cs.cmu.edu/~aada/courses/15251f17/www/index.html)
+- [15-210 Parallel and Sequential Data Structures and Algorithms](https://www.cs.cmu.edu/afs/cs/academic/class/15210-s18/www-s18/)
 
 *Robotics*
 - 16-299 Introduction to Feedback Control Systems
 - 16-362 Mobile Robot Programming Laboratory
-- 16-384 Robot Kinematic and Dynamics
+- [16-384 Robot Kinematic and Dynamics](http://robotkinematics.org)
 
 *Mathematics*
 - 21-241 Matrices and Linear Transformations
