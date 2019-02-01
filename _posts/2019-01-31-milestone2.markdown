@@ -1,0 +1,55 @@
+---
+layout: post
+title: "15-400 Project Milestone 2"
+date: 2019-01-31
+excerpt: "Second milestone report for the first three weeks of the spring semester"
+research: true
+
+comments: false
+---
+
+## Major Changes
+
+Since my project proposal, there has not been any major changes to my goals or the implementation of my project. Currently everything is still the same.
+
+## What I Have Accomplished So Far
+
+So far, I have mostly implemented the removal of initial removal of global overlaps that get created by some parameterization. This first included taking a mesh described in an .obj file and transforming the data into a halfedge mesh. With this mesh, which includes the uv coordinates of each vertex, I construct a graph with the interface required by a certain [graph library](http://www.andres.sc/graph.html) that I need to use. This library has two functions called greedyAdditiveEdgeContraction and then kernighanLin which should make it simple to detect overlaps and mark which edges need to be cut. Following this method corresponds with my starting goals to implement certain parts of the [Box Cutter paper](http://www.cs.ubc.ca/labs/imager/tr/2018/BoxCutter/Limper2018_BoxCutter.pdf). 
+
+Utilizing those two functions for my own purposes has stalled me for a bit, as I actually don't have the graph theory knowledge to wield them. However, while I am trying to figure that out, I continued onward and finished implementing the functions that reorganize the model into multiple cut meshes. These new meshes I then repack with no overlaps and write back to a .obj file.
+
+## Meeting My Milestone
+
+As a reminder, my goal for February 1st was this
+
+> One of the problems that we described is that some parameterizations introduce overlaps where different points on the 3D surface get mapped to the same location on the 2D atlas. By February 1st, I hope to have some program that takes in an atlas and the 3D source and identifies any overlaps that were created. Furthermore, the program should be able to fix these overlaps.
+
+So for this milestone, I am very close to reaching my goal and should be off by possibly a day or two. Most of my work for this milestone went into the surrounding implementation (halfedge mesh, reading and writing .obj files) and for these past couple days I have been focusing on the overlap removal itself. Since then many concepts are becoming clearer, so these overlaps will disappear soon. 
+
+## Surprises
+
+Turns out, it takes quite a bit of work to read a halfedge mesh from a file. The .obj file is just a list of vertex coordinates and faces, so, while
+space compact, is not useful for much else and must be read into a better
+structure. This was something I knew ahead of time, because I worked
+with halfedge meshes in my computer graphics class, but the IO part
+was taken care of for us so this was a first time jumping into this messy business. 
+
+Probably the majority of my time for this milestone period of time was spent here, though much of it was also caused by me fighting one on one with CMake. CMake probably frustrated me the most because the very simple things I wanted to do were easy but I was frequently forced to concede remotely larger organizations in favor of simplified layouts. For the most part after getting CMake to work I have left it alone but I hope to learn more and finish what I started
+
+## Looking Ahead
+
+From my project proposal back in the fall, the next milestone will be
+
+> Our goal here is to improve the storage efficiency of the 2D atlas, so then by February 15th I should have implemented a system to evaluate the efficiency of the current atlas. This should be a judgement of how much of the space within the 2D space given to the atlas that is actually occupied.
+
+So actually, now that I have a lot of the brute labor out of the way, this next milestone does not seem very difficult relative to this past one. Currently, I could gather up the area of all of my mesh faces, and I could also calculate the smallest bounding box containing all the meshes in the model. Finding the storage efficiency should then by pretty simple with this information.
+
+## Revisions to my 15-400 Milestones
+I believe that I am still on schedule for my milestones even after
+experiencing some unanticipated delays, so there is currently no 
+need to adjust my future milestones yet. Hopefully with the intial 
+practical struggles out of the way I can focus more on the conceptual 
+problems that I am meant to face for this research. 
+
+## Resources Needed:
+I have everything that I need
