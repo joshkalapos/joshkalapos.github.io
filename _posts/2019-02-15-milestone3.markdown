@@ -1,0 +1,60 @@
+---
+layout: post
+title: "15-400 Project Milestone 3"
+date: 2019-01-31
+excerpt: "Third milestone report for work done between January 31st, 2019 and February 15th, 2019"
+research: true
+
+comments: false
+---
+
+## Major Changes
+
+Since my project proposal, there has not been any major changes to my goals or the implementation of my project. Currently everything is still the same.
+
+## What I Have Accomplished So Far
+
+For this two week period I had to backtrack a whole bunch on the work that I've done since the beginning of the semester. Fortunately, this Milestone goal was not too difficult to implement and is just waiting to be added once my backtracking is finished.
+
+What has changed was that originally I was making my own applications that would take in a .obj file and read it into a halfedge mesh/uv flattening and proceed to remove the overlaps before writing it back to an .obj file. Instead, as my implementation of a halfedge mesh began to just look more and more like the one in the original BFF application, we've just decided that it would be easier if my remove overlaps work was just a function call after the flattening. So I had to transfer a lot of my work over to the BFF code, battle CMake, etc. This process actually didn't take that long so I was able to continue working without much delay. Though I had to leave a lot of the code that I written with great pain about reading in .obj files behind because it was already implemented. 
+
+Additionally, as for the actual removing of overlaps, I've taken the steps specified in the [Box Cutter paper](http://www.cs.ubc.ca/labs/imager/tr/2018/BoxCutter/Limper2018_BoxCutter.pdf) to detect and remove. Essentially I had to take my flattening with all it's triangles and vertex uv coordinates, and construct a large graph where the faces are the vertices and they have weighted edges between all their neighbors. Overlapping faces have an edge between them with weight negative infinity. The paper then uses two algorithms from this [graph library](http::///www.andres.sc/graph.html), specifically greedyAdditiveEdgeContraction and kernighanLin to separate the graph into cut components where formerly overlapping faces are no longer in the same components. As for the actual use of these two functions we had to contact the PhD student that had written the paper because both algorithms took in a "lifted graph" in addition to the regular graph, and they had not specified in their paper what that lifted graph was set to be. Even before that I had spent a great deal of time researching papers from the author of the graph library, who specified that the lifted graph should be a graph with the same vertices as the original graph, but whose edges are a subset of the edges not in the original graph. Strangely, the result was that for BoxCutter they ignore that requirement and the lifted graph is the same thing as the original graph.
+
+This was sort of a distracting mission, but once I found out that they were not doing anything magical with liftedGraphs, I was able to finish my removing overlaps implementation. There was actually quite a lot of work to feed the right input into the graph algorithms, especially the identifying of face overlaps. There's a lot of ways to take in thousands of triangles and find overlaps, but the Box Cutter paper said that they used a uniform grid to sort the triangles, and then for each triangle they queried the cells that the triangle belonged in for any intersections. So that's what I spent time implementing, and, I would have preferred to find a robust implementation online, but what I have currently is my work that I can only hope stands the test of millions of triangles barraging it. 
+
+Currently I'm working on adding some vizualization of my process to the BFF viewer application. All my functions have finished and stored their results in the mesh, but I don't yet have a way to look the cuts to see if they're correct or not. The biggest struggle here is that I don't know OpenGL that well, and it's been difficult finding a place to insert my colored cut edges within a bunch of code that is rendering the rest of the mesh/GUI of the application. 
+
+<figure>
+  <a href="/assets/img/research/Face3ConeOverlap.png">
+    <img src="/assets/img/research/Face3ConeOverlap.png">
+  </a>
+  <figcaption>Triangle overlap in the middle of the flattening on the right</figcaption>
+</figure>
+
+Ideally in this image I would like to see yellow edges that indicate edges that should be cut to remove overlaps. This flattening was intentionally given only three cones to force a situatino where the face could n ot be flattened without there being some overlap.
+
+## Meeting My Milestone
+
+As a reminder, my goal for February 1st was this
+
+> Our goal here is to improve the storage efficiency of the 2D atlas, so then by February 15th I should have implemented a system to evaluate the efficiency of the current atlas. This should be a judgement of how much of the space within the 2D space given to the atlas that is actually occupied. 
+
+This milestone was actually pretty simple as it just requires measuring the amount of space occupied of the model's bounding box, so I had implemented this first before I started taking steps back. So this milestone is met, as I take on some other additional problems that I have revealed from my other work during this two week period. 
+
+## Surprises
+
+A surprise I had is how complicated people online make their triangle-triangle intersections. Currently I have written a dead simple algorithm that I know should have correctness, but maybe one day I will reach out and use one of the 100 "fastest" triangle-triangle intersection algorithms that I read about during the past two weeks.
+
+## Looking Ahead
+
+From my project proposal back in the fall, the next milestone will be
+
+> By March 1st I should be reaching a halfway point on implementing the Box Cutter algorithm. This should be giving me an idea of how to implement some algorithm that modifies the paramterization/mesh to create a better packed atlas. 
+
+With a lot of my work taking me backwards, I might have to better define what the "halfway point" is for implementing the Box Cutter algorithm. Thinking about it now, I'll probably have to drop some features, but I can't say which ones yet as I should figure out what is essential. Hopefully with a lot of hard work I can reach this milestone. 
+
+## Revisions to my 15-400 Milestones
+I still believe that I can move forward with my milestone goals, and as we approach closer to them, the ones that were written purposely vague to allow for clarification when the time comes closer can be modified slightly. 
+
+## Resources Needed:
+I have everything that I need
