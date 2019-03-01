@@ -1,0 +1,75 @@
+---
+layout: post
+title: "15-400 Project Milestone 4"
+date: 2019-01-31
+excerpt: "Fourth milestone report for work done between February 16th, 2019 and March 1st, 2019"
+research: true
+
+comments: false
+---
+
+## What I have accomplished so far
+
+There's a lot to be said here about what was accomplished during this past milestone period. Specifically that I finally added some vizualization to the cut that the [Box Cutter algorithm](http://www.cs.ubc.ca/labs/imager/tr/2018/BoxCutter/Limper2018_BoxCutter.pdf) was suggesting for overlaps on a mesh. Turns out, the results do not look that desireable. 
+
+<figure class="third">
+  <a href="/assets/img/research/OriginalFlattening.png"><img src="/assets/img/research/OriginalFlattening.png"></a>
+  <a href="/assets/img/research/0.25Angle2ComponentsWeights.png"><img src="/assets/img/research/0.25Angle2ComponentsWeights.png"></a>
+  <a href="/assets/img/research/BoxCutter.png"><img src="/assets/img/research/BoxCutter.png"></a>
+  <figcaption>Left: Original unmodified flattening. Center: My separated components to remove overlaps. Right: Box Cutter's results</figcaption>
+</figure>
+
+From the three figures, the leftmost one is a flattening of the face mesh without any cone singularities introduced. Meaning that, unlike the two other flattenings pictured to the left, I haven't placed a negative cone that forces an uv overlap. It's really here as a reference but, as you can see, the flattening of a face looks like a flattened face. 
+
+On the other hand, you take my implementation of the overlap preprocessing in Box Cutter (with the negative cone), and the cut itself does work and eliminates overlaps by separating the mesh into two different components. This is vizualized only in the 3D mesh but the 2D mesh there is not any separation and repacking yet. So the preprocessing does its job of removing overlaps, but, visually the cut is ugly, especially if we cut the flattening as well and laid the separated components out on the plane. If a human was asked to eliminate the overlap, they would probably cut from one boundary of the face to the other, eliminating the overlap and making a pleasing, equally sized set of components.
+
+Around this time, the creators of Box Cutter released a Windows executable of their software that allowed you to run the overlap preprocessing as well as the entire algorithm outlined in their paper. So, I gave it the download and ran it on the UV mesh with the negative cone overlap. The resulting output can be seen in the image on the furthest right. After removing the overlap, Box Cutter took the new components and proceeded to chop them up into smaller components that packed well into UV space. Though it does its job very well, as it scores well on their metric that judges based on boundary length, \# of components and packing efficiency, we thought that it gave up any intuitive meaning that the different components of the face had. And was this really what we wanted our flattening to look like? This has to be used by people after all. It was sad after the work to recreate the paper, but I had to take a step back and consider what I considered to be a good flattening, and, more importantly, what people in the real world consider to be a "good" flattening. 
+
+#### The Quest for The “Best” UV Mesh Tool
+
+> “Unwrapping is a skill in and of itself. There really is no right or wrong. You have to judge that yourself.” - [CharlesL](https://blender.stackexchange.com/questions/6755/how-to-properly-unwrap-my-mesh)
+
+So with that in mind, I began a survey to find out what the common user desires out of a UV Mesh tool. Naturally, people want tools that are fast, and have some intelligence. But, as for what kind is a good flattening (What features are focused on), there are many opinions that can be neither right nor wrong. Probably why people have been flattening meshes for so long but do not have a standardized way to do so. In a lot of use cases, people choose their own segmentation cuts on a mesh to separate everything into components. Then these components get flattened with the assistance of some simple algorithm that doesn't avoid intra-component overlaps. If there are overlaps, then simply the human segmenter makes a different attempt until there are no overlaps. It seems kind of a slower process, but people claim that it becomes faster when you get more experienced with working with meshes. The benefit and downfall of this is that our segmentations are only as good as the person wants/is capable of making them. 
+
+Of course, there's a lot of computer assistance provided for our human segmenters. At the minimum level, it is not as if a person has label each face with the component it belongs to, or even select each edge that they want along a cut. In most cases, for example in Blender and their [Smart UV Project](https://docs.blender.org/manual/en/latest/editors/uv_image/uv/editing/unwrapping/mapping_types.html), the human provides constraints that should be followed when the segmentation and flattening is automatically performed.
+
+Gathering all that I've read, it would seem that my new pursuit is to find some way to work towards a flattening tool that creates a better automated flattening with respect to what a human would create, with an emphasis on lowering human input. 
+
+The desire for such a tool is of course nothing new as, long ago in the past, some folks at Princeton came up with a [A Benchmark for 3D Mesh Segmentation](http://segeval.cs.princeton.edu/) that measures different mesh segmentation strategies against ground truths created by humans. All the tools that they measured sought to segment meshes to be flattened in the plane, but on how "human" they were, their performance varied a lot based on the many metrics given by the benchmark. From their evaluations, the authors concluded that 
+
+> Our results suggest that people are remarkably consistent in the way that they segment most 3D surface meshes, that no one automatic segmentation algorithm is better than the others for all types of objects, and that algorithms based on non-local shape features seem to produce segmentations that most closely resemble ones made by humans
+
+So, basically, there are many algorithms that suggest an automatic or minimal human input method to segment a mesh, but if the goal of the algorithm is to segment in a way that is human, it is extremely difficult to work best in all cases. 
+
+#### Conclusions
+
+Overall, despite all of the things going against the Box Cutter implementation, we believe that there could be ways to modify the features that the algorithm believes to be important, so that it will make different cuts. Additionally, in the future we're going to have to add some features that allow the user more ability to declare what they believe to be important in a flattening. 
+
+## Major Changes
+
+As all the reasoning that I've discussed above, we're bringing changes primarily to the goals of the project. Right now it's unclear if the milestones themselves should be changed, because they can still be considered in a new light. In the end, as my milestone's say, we're going to have some flattening algorithm.
+
+## Meeting My Milestone
+
+> By March 1st I should be reaching a halfway point on implementing the Box Cutter algorithm. This should be giving me an idea of how to implement some algorithm that modifies the paramterization/mesh to create a better packed atlas.
+
+With this turnaround I can't say that I have implemented half of the Box Cutter algorithm. A lot of my time these past two weeks was spent researching common segmentation techniques and investigating people's preferences about these techniques. 
+
+## Surprises
+
+Surprises was the sad results of the initial preprocessing part of the Box Cutter algorithm. I suppose it does what it is supposed to do, but it does not fit our needs. 
+
+## Looking Ahead
+
+From my proposal, the next milestone is
+
+> At this time I will be finished with the Box Cutter algorithm. During this whole period I hope to have also done a great deal of thinking on if there is a better way to pack this atlas. There are some nice assumptions that the Boundary First Flattening gives, like being seamless, which were not possible in Box Cutter.
+
+Though I'm behind right now, I believe that over spring break I should make some good progress. 
+
+## Revisions to my 15-400 Milestones
+
+No revisions to what gets produced by my milestones. 
+
+## Resources Needed:
+I have everything that I need
