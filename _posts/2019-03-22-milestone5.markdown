@@ -1,0 +1,48 @@
+---
+layout: post
+title: "15-400 Project Milestone 5"
+date: 2019-03-21
+excerpt: "Fifth milestone report for work done between March 1st, 2019 and March 22nd, 2019"
+research: true
+
+comments: false
+---
+
+## What I have accomplished so far
+
+Since my last milestone report, we have decided that Box Cutter will not provide the mapping that we need. The reasoning behind this primarily is because Box Cutter would be modifying the flattened mesh that gets produced from the Boundary First Flattening (BFF) algorithm. This would mean that it has to work with whatever BFF gives it. Then, because my goal for this project is turning into creating a semantic flattening, or a flattening of a mesh that has some sort of meaning, it becomes very difficult to recover meaning from the BFF flattening and reorganize it in a way that preserves the nice minimal distortion properties that BFF gives. This kind of reasoning can be motivated by the figures below of two different human characters flattened by BFF. The mapping does have a minimalized distortion given the number of cones used, but any distincting of where the legs/head/arms might be is lost.  
+
+<figure class="half">
+  <a href="/assets/img/research/BFF_LadyRunning.png"><img src="/assets/img/research/BFF_LadyRunning.png"></a>
+  <a href="/assets/img/research/BFF_Dude.png"><img src="/assets/img/research/BFF_Dude.png"></a>
+  <figcaption>Two different examples of what BFF currently outputs with these input meshes. Both with 8 cones placed</figcaption>
+</figure>
+
+So then, we have begun to focus on the other possiblity of modifying the model that gets handed to the BFF algorithm. This would mean, doing actual 3D mesh segmentation and handing the distinct components to BFF. The largest benefit of this is that, if the segmentation is done well according to semantics, then the flattening should also have a much better meaning, as well as having the nice properties of BFF. So, for example, rather than the human mesh being all flattened at once, the mesh gets split into it's head, arms, torso, and legs, then mapped into separate UV pieces. 
+
+Over this milestone period, I have been trying to use some of the segmentation techinques that I have learned from the research I had done on the subject in the past milestone period. Currently, I am in the midst of creating a modified version of the segmentation algorithm done in [this](https://arxiv.org/pdf/1505.06973.pdf) paper. Overall, the part of the paper that I am interested in is where they use their Lifted Multicut algorithm to segment the mesh. By calculating many different geometric features for all the edges of the mesh, they were to an extent able to determine some probability that edges should be segmented, and then they churn it through the paper's main proposed algorithm to produce pretty satisfying results. In their paper they use these properties to train for machine learning, but, to start, I have been trying to just make basic inferences on my own from these properties to come up with a working segmentation. Afterward possibly, machine learning could be used on my end. Taking this data and on my own turning it into some segmentation probability has been hard, and I am currently a bit stuck on this process. 
+
+## Major Changes
+
+As I have described in the previous section, I am no longer working on some process that will do some post-computation for BFF to make a better flattening. Now I am working on some process taht does some pre-computation (Segmentation).  
+
+## Meeting My Milestone
+
+> At this time I will be finished with the Box Cutter algorithm. During this whole period I hope to have also done a great deal of thinking on if there is a better way to pack this atlas. There are some nice assumptions that the Boundary First Flattening gives, like being seamless, which were not possible in Box Cutter.
+
+The direction of the project has changed, so this milestone does not hold much sway anymore. I suppose the equivalent of this milestone would be to have finished a basic segmentation implementation, which I wish could have been accomplished if not for the block I am currently experiencing. 
+
+## Surprises
+
+Nothing really surprised me here, it has been a long time coming.
+
+## Looking Ahead
+
+Looking ahead, because I do not believe that my future milestones will be of much use from this point on, this next milestone period will be focused on achieving a good semantic segmentation. Whether using the algorithm that I have been currently focusing on or perhaps a better performing algorithm (According to the Princeton Benchmark) should I believe it is easier to implement. 
+
+## Revisions to my 15-400 Milestones
+
+As my milestones have disappeared, I am going to have to make some new ones. I'll have those by the end of this next milestone period. They should be more specific now that we are actually coming into the second half of the semester. As opposed to when I wrote them last fall.
+
+## Resources Needed:
+I have everything that I need

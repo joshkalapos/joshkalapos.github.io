@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "15-400 Project Milestone 3"
-date: 2019-01-31
+date: 2019-02-15
 excerpt: "Third milestone report for work done between January 31st, 2019 and February 15th, 2019"
 research: true
 
