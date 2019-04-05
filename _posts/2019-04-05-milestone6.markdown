@@ -1,0 +1,53 @@
+---
+layout: post
+title: "15-400 Project Milestone 6"
+date: 2019-04-05
+excerpt: "Sixth milestone report for work done between March 22nd, 2019 and April 5th, 2019"
+research: true
+
+comments: false
+---
+
+## What I have accomplished so far
+
+<figure class="half">
+  <a href="/assets/img/research/basic-kmeans-segmentation.png"><img src="/assets/img/research/basic-kmeans-segmentation.png"></a>
+  <a href="/assets/img/research/basic-kmeans-segmentation2.png"><img src="/assets/img/research/basic-kmeans-segmentation2.png"></a>
+  <figcaption>Segmentations of two human models using a k-means clustering algorithm</figcaption>
+</figure>
+
+Since my last milestone report, I have continued to work on adding a segmentation process to the BFF pipeline in order to separate the mesh into semantically relevant pieces. The segmentation algorithm that I implemented was a mixture of different k-means algorithms that I had read in old research papers. It's relatively quick to come up with segmentations, though there are modifications that need to be made to make it more reliable. For example, right now it is simply using a graph edge distance to grow its regions. This is not for the best because the segmentation would greatly vary if we were to change the granularity of the mesh in some areas. Meaning that changing the nature of the mesh would cause different segmentations, even though the surface that the mesh is supposed to represent has itself not changed. The only advantage of this approach is that it allows me to use BFS, while a more complicated description of distance will have to use at least Dijkstra's algorithm. Though not difficult to add, after I got a working implementation of this form of segmentation I moved to working on writing the flattening as an output.
+
+I spent some time working on writing my uv mapping to a file. As I spoke of in my previous milestones, when processing the mesh with BFF and my segmentation, the mesh is represented as a [half-edge mesh](http://www.openmesh.org/Documentation/OpenMesh-Doc-Latest/a03930.html). This makes it easy to make queries like, what are my neighboring faces, what edges are connected to a vertex, etc. But when writing to a file, the .obj format takes a minimal space approach where you first list all your 3d vertices and 2d vertices, and then you list all of the triangle faces by their vertex triples. Most of the time, this task is not so bad, because each vertex has a single 3d and 2d location. However, when one makes a cut along the edges of a mesh, this is no longer true as a vertex can have two or more locations depending on how many cuts go through it.
+
+This kind of got even weirder when I started considering segmentation cuts and BFF cuts at the same time. Different segmentation pieces get bin packed, so their uv coordinates get translated some distance. However, BFF cuts could potentially cut through a segment, separating a segmented piece into potentially multiple pieces. Even though if logically they should be one continuous segment. For a bit this caused me trouble because I was not sure how to correct this issue. But, I talked with Rohan about it and he came up with a strategy that is fairly simple and will hopefully make this a lot easier. The strategy is to, rather than accepting the packed and cut translations as is, I should take the uv flattening, and after segmenting the mesh into components, lay out the faces manually in the plane. As I know the side lengths of the faces in the plane, the algorithm is to just lay these faces out in multiple growing regions. Then, I will not need to worry about what BFF cuts, but just the cuts that separate the mesh into different packed components. 
+
+<figure class="third">
+  <a href="/assets/img/research/dolphin.png"><img src="/assets/img/research/dolphin.png"></a>
+  <a href="/assets/img/research/dolphin_components_bff.png"><img src="/assets/img/research/dolphin_components_bff.png"></a>
+  <a href="/assets/img/research/dolphin_components.png"><img src="/assets/img/research/dolphin_components.png"></a>
+  <figcaption>Colored regions represent different components of the segmentation. Notice that same colored regions are sometimes not continuous because they are on opposite sides of a BFF cut. This results with the image on the right where there are more packed components than there are actual components. I believe this also contributes to the clear inefficiency of the packing</figcaption>
+</figure>
+
+## Major Changes
+
+There are no major changes this milestone period to the goals that I have for this project.
+
+## Meeting My Milestone
+
+Last milestone period I discussed the algorithms that I would be implementing potentially for my segmentation. I ended up implementing a k-means algorithm so I was able to meet the milestone that I had set for myself, in addition to some other tasks that arose afterwards. 
+
+## Surprises
+
+Nothing really surprising here. Just continuing the work on getting a full end to end working implementation. 
+
+## Looking Ahead
+
+Looking ahead, I hope to get finish getting a working end to end segmentation process that can appropriately write to .obj files. The difficulty here has been playing nice with BFF and using its flattening to the segmentations full advantage. I believe that once I get a process to lay out the flattening in the plane with the different components considered, the actual output of the file is simple again.  
+
+## Revisions to my 15-400 Milestones
+
+No revisions
+
+## Resources Needed:
+I have everything that I need

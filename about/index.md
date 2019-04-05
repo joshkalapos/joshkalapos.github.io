@@ -18,23 +18,26 @@ There I graduated from Mt. Lebanon High School.
 
 ## Cross Country and Track
 
-At school I also run for the
-[cross country team](http://athletics.cmu.edu/sports/mxc/index)
-in the fall and the
-[track and field team](http://athletics.cmu.edu/sports/mtrack/index)
-in the winter/spring. Running is easily one of my biggest time commitments
-at home or school and has really shaped my life and habits over the years.
-
-My team and I use this really old site 
-[Logarun](http://www.logarun.com/calendars/joshkalapos/) to track our 
-training. Has not seen an update in years and I know there there are
-other sites out there, but this one is ours.
-
 <figure class="half">
   <a href="/assets/img/about/rowan2018.jpg"><img src="/assets/img/about/rowan2018.jpg"></a>
   <a href="/assets/img/about/regionals2018.jpg"><img src="/assets/img/about/regionals2018.jpg"></a>
   <figcaption>Rowan Invitational 2018 and NCAA Mideast Regionals 2018</figcaption>
 </figure>
+
+At school I also run for the
+[cross country team](http://athletics.cmu.edu/sports/mxc/index)
+in the fall and the
+[track and field team](http://athletics.cmu.edu/sports/mtrack/index)
+in the winter/spring. Running is easily one of my biggest time commitments
+at home or school and has really shaped my life over the years. Perhaps until next winter, I am the [university record holder](http://athletics.cmu.edu/sports/mtrack/2018-19/releases/20190223xptauj) of the indoor 5000. 
+
+My team and I use this really old site 
+[Logarun](http://www.logarun.com/calendars/joshkalapos/) to track our 
+training. Though I now also use [Strava](https://www.strava.com/athletes/40109316) since it automatically gets uploaded by my watch.
+
+<center>
+  <iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/40109316/activity-summary/a88a0b6200daf558b8e69f09baf0244d316674eb'></iframe>
+</center>
 
 ## Star Wars Stuco Instructor
 
