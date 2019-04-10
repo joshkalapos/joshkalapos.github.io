@@ -21,7 +21,11 @@ layout: compress
                         <i class="fa fa-home"></i>
                     </a>
                 </div>
-                <div class="post-list">
+                <div class="content">
+		    {{ content }}
+		</div>
+		
+		<div class="post-list">
                     {% for post in site.posts %} 
                         {% if post.research %}
                     <ul>
