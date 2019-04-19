@@ -1,0 +1,45 @@
+---
+layout: post
+title: "15-400 Project Milestone 7"
+date: 2019-04-19
+excerpt: "Seventh milestone report for work done between April 5th, 2019 and April 19th, 2019"
+research: true
+
+comments: false
+---
+
+## What I have accomplished so far
+<figure class="half">
+  <a href="/assets/img/research/horse_components.png"><img src="/assets/img/research/horse_components.png"></a>
+  <a href="/assets/img/research/woman_components.png"><img src="/assets/img/research/woman_components.png"></a>
+  <figcaption>Two examples of segmentation with flattenings viewed in MeshEdit</figcaption>
+</figure>
+
+During this milestone period I continued to work on the full working version of my segmentation process. Some changes to my what I have done is that if the BFF flattening does not produce overlap, we do not segment the mesh into smaller piece. This I suppose makes it so that I can deal with a specific case and also so that we can surprise the user less as we do not suddenly segment their mesh. 
+
+In my last report I described a process by which I would consider both my segmentation and the original mesh layout in the plane, before creating a new parameterization. This I was able to implement and for the most part eliminate overlaps created in the original flattening. An issue that I'm dealing with right now is when segmentations cover "critical" areas that always seem to overlap when the triangles get placed one by one. A solution I'm coming up with though involves different segments trading triangles along their boundaries, but it needs some more work before a full demonstration. 
+
+Currently not all of the components that get created I believe are as semantically meaningful as I would have liked, but this in part because there needs to be better cone placement so that the flattenings can have lower distortion. I am working on building up the patches after the flattening of the whole mesh, and, if the initial flattening has lost its meaning, it's a bit difficult to recover. Hopefully as this project comes to an end I can come up with some strategies to work around this.
+
+## Major Changes
+
+There are no major changes this milestone period to the goals that I have for this project.
+
+## Meeting My Milestone
+
+I was able to meet the goals that I've set for myself at the previous milestone report.
+
+## Surprises
+
+Nothing really surprising here. Just continuing the work on getting a full end to end working implementation. 
+
+## Looking Ahead
+
+Looking ahead, I hope to get finish getting a working end to end segmentation process that can appropriately write to .obj files. The difficulty here has been playing nice with BFF and using its flattening to the segmentations full advantage. I believe that once I get a process to lay out the flattening in the plane with the different components considered, the actual output of the file is simple again.  
+
+## Revisions to my 15-400 Milestones
+
+No revisions
+
+## Resources Needed:
+I have everything that I need
