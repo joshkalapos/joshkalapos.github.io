@@ -47,10 +47,9 @@ university.
 
 I had taken the course my freshman fall and inherited it a year later
 when the former instructors graduated. Since then, my friends and I have taught this
-course to classes averaging around 15 students for the Spring 18, Fall 18 and
-now the Spring 19 semesters. The curriculum is primarily studying the
+course to classes averaging around 15 students for the Spring 18, Fall 18, Spring 19 and now Fall 19 semesters. The curriculum is primarily studying the
 inspirations that led to the creation of Star Wars and then also the effects
-that it has had on culture following each movie release
+that it has had on culture following each movie release.
 
 <figure>
   <a href="/assets/img/about/StarWars_Stuco.png"><img src="/assets/img/about/StarWars_Stuco.png"></a>
@@ -65,12 +64,10 @@ Currently I am majoring in Computer Science with a minor in Robotics
 
 ***Relevant Coursework***
 
-**Classes this semester**
-
-- [16-311 Introduction to Robotics](http://generalrobotics.org)
-- [15-458 Discrete Differential Geometry](http://brickisland.net/DDGSpring2019/)
-- 15-400 Research Practicum in Computer Science
-- 82-171 Elementrary Japanese I
+**Classes this coming fall semester**
+- 15-740 Computer Architecture
+- 15-424 Logical Foundations of Cyber-Physical Systems
+- [15-463 Computational Photography](http://graphics.cs.cmu.edu/courses/15-463/)
 
 **Previous Semesters**
 
@@ -81,11 +78,14 @@ Currently I am majoring in Computer Science with a minor in Robotics
 - [15-213 Introduction to Computer Systems](https://www.cs.cmu.edu/afs/cs/academic/class/15213-f17/www/)
 - [15-251 Great Ideas in Theoretical Computer Science](http://www.cs.cmu.edu/~aada/courses/15251f17/www/index.html)
 - [15-210 Parallel and Sequential Data Structures and Algorithms](https://www.cs.cmu.edu/afs/cs/academic/class/15210-s18/www-s18/)
+- [15-458 Discrete Differential Geometry](http://brickisland.net/DDGSpring2019/)
+- 15-400 Research Practicum in Computer Science
 
 *Robotics*
 - 16-299 Introduction to Feedback Control Systems
 - 16-362 Mobile Robot Programming Laboratory
 - [16-384 Robot Kinematic and Dynamics](http://robotkinematics.org)
+- [16-311 Introduction to Robotics](http://generalrobotics.org)
 
 *Mathematics*
 - 21-241 Matrices and Linear Transformations
