@@ -4,6 +4,7 @@ title: "15-400 Project Milestone 2"
 date: 2019-01-31
 excerpt: "Second milestone report for the first three weeks of the spring semester"
 research: true
+tags: [Research, OverlapRemoval]
 
 comments: false
 ---

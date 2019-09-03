@@ -4,6 +4,7 @@ title: "15-300 Project Milestone 1"
 date: 2018-12-22
 excerpt: "First milestone report at the end of 15-300 Fall 2018"
 research: true
+tags: [Research, OverlapRemoval]
 
 comments: false
 ---

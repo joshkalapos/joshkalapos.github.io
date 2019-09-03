@@ -66,7 +66,7 @@ Currently I am majoring in Computer Science with a minor in Robotics
 
 **Classes this coming fall semester**
 - 15-740 Computer Architecture
-- 15-424 Logical Foundations of Cyber-Physical Systems
+- [15-424 Logical Foundations of Cyber-Physical Systems](http://lfcps.org/course/lfcps19.html)
 - [15-463 Computational Photography](http://graphics.cs.cmu.edu/courses/15-463/)
 
 **Previous Semesters**
