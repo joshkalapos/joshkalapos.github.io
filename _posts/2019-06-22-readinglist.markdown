@@ -23,7 +23,30 @@ essential apps like Facebook with the Books app.
 Maybe I will write some words about each book after I finish reading them,
 but I would not count on it. 
 
-### The March of Folly - Barbara W. Tuchman (August 27th - )
+### Blueprint: The Evolutionary Origins of a Good Society (October 16th, 2019 - )
+
+This book I have in physical print. Cross country post-season is starting
+so maybe I'll read during bus rides.
+
+### The March of Folly - Barbara W. Tuchman (August 27th - October 16th, 2019)
+
+It's tough to find time to read during the school year, as I try to balance
+school and cross country. It's very possible that I read this book, with
+a few exceptions, only in times I lay in bed after I wake up and before
+I go to sleep. I also heard of this book from the History of Rome 
+podcast. The March of Folly is an examination of multiple examples
+in history in which governments pursue policies that are contrary to their
+own interests. There are several requirements for these examples, such
+that the policies have to be recognized as a mistake at the time, and
+that there must exist alternatives. After surveying the many mistakes done 
+by governments that had every reason to make the correct choice, this
+book did not leave me with much confidence for what is in store for 
+humanity in the future. Despite thousands of years of human
+governence, it would seem that we still are not really skilled at 
+generating good policy. Surprising, as our capability to advance our
+scientific methods has been exponentially on the rise. This book was
+written in the early 80s, so possibly this sort of attitude was common
+for the time, as citizens' trust in government was depicted as low.
 
 ### The Roman Way - Edith Hamilton (August, 2019)
 

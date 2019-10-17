@@ -6,7 +6,9 @@ comments: false
 ---
 
 I was born in Toledo, OH but grew up in Pittsburgh, PA.
-There I graduated from Mt. Lebanon High School.
+There I graduated from Mt. Lebanon High School. 
+Currently, I am a senior at Carnegie Mellon University pursuing a degree
+in computer science.
 
 <figure class="third">
   <a href="/assets/img/about/mountain.jpg"><img src="/assets/img/about/mountain.jpg"></a>
@@ -64,8 +66,8 @@ Currently I am majoring in Computer Science with a minor in Robotics
 
 ***Relevant Coursework***
 
-**Classes this coming fall semester**
-- 15-740 Computer Architecture
+**Classes this semester**
+- [15-740 Computer Architecture](https://www.cs.cmu.edu/afs/cs/academic/class/15740-f19/www/index.html)
 - [15-424 Logical Foundations of Cyber-Physical Systems](http://lfcps.org/course/lfcps19.html)
 - [15-463 Computational Photography](http://graphics.cs.cmu.edu/courses/15-463/)
 
