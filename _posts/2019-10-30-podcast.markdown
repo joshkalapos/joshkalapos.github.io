@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Carnegie Natural Podcast"
+data: 2019-10-30
+excerpt: On a blog that nobody reads, I'm announcing a podcast that nobody will listen to.
+
+comments: false
+---
+
+My friends and I, out of having nothing better to do, have started a podcast called
+Carnegie Natural. Actually, this previous statement might not be true. We actually
+have a lot of better, more important things to do, like getting full-time jobs or
+applying to graduate school, but we've started a podcast instead. An idea resembling a
+podcast has been on the back of our minds for a while, so we decided to force ourselves
+into action by purchasing a good microphone and hitting the record button.
+
+Carnegie Natural has no real theme, other than our goal to just be real with it and
+tell hopefully good stories and share maybe decent opinions. I'm mostly inspired
+by podcasts that I have listened to in middle and high school such as the Rooster
+Teeth Podcast or The Internet Box. Both run by related people, they are just people
+sitting in a room talking about whatever may interest them at that moment. This sort
+of style might be behind the times though, as that was back in 2013 and now there are
+a million podcasts of some dudes huddled around a mic. Our experiences are not so unique
+as to be a podcast that is a must listen.
+
+Despite all that, we're recording this podcast anyway. Hopefully, it'll come out on 
+Monday evenings every week. In an amazingly simple process, we're on [Spotify](https://open.spotify.com/show/7v3EDMLqOexoXS8YMu2wnv). Though, technically this podcast is distributed by Anchor (owned by Spotify), and they provide embeded links to the podcast. You can see one below.
+
+<center>
+<iframe src="https://anchor.fm/carnegienatural/embed" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>  
+</center>
+
+Additionally, there's a website for the podcast at [https://anchor.fm/carnegienatural](https://anchor.fm/carnegienatural). Whoever may be reading this, maybe give it a listen. If anything, I may enjoy listening to this podcast 5 years from now. 
