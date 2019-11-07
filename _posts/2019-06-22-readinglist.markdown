@@ -28,11 +28,31 @@ but I would not count on it.
 This book I have in physical print. Cross country post-season is starting
 so maybe I'll read during bus rides.
 
-### The Guns of August - Barbara W. Tuchman (October 18th - )
+### The Guns of August - Barbara W. Tuchman (October 18th - November 6th, 2019)
 
 As the preface of this book says, Tuchman makes the reader forget about 
-what they know about history and just listen to the suspensful events leading 
-up to and during the first month of World War I.
+what they know about history and just listen to the suspensful events 
+leading up to and during the first month of World War I. After reading 
+this book, I definitely have placed more importance in my mind on the
+conflict that started off the 20th century. Being I think somewhat
+adaquate in my historical knowledge, I was aware of the effects that
+this conflict would put in place. An entire generation killed,
+the division of the Ottoman Empire, the foundations for the second
+world war and so on. However, I had never gone day by day through just
+the first month of conflict like Tuchman has taken me through. having
+done all of the hard work reading the diaries of generals, their telegrams,
+official accounts, Barbara Tuchman creates an almost all-seeing tale
+for the reader. Every decision on all sides that gets made is accounted 
+for at length. The real intensity of the book I think comes from
+waiting for what comes after each military order. As we know today, the
+war came to a stalemate and lasted for 4 years, resulting in 
+~19 million deaths. This stalemate, Tuchman I believe argues, is 
+primarily a result of the first month of action. Where decisive victory
+could have been won by either side in those days before the war settled
+into trench warefare. It was well within the German's grasp
+before the Marne, and, had both sides not made the mistakes Tuchman
+meticulously lays out, the length of the war would have been greatly 
+reduced, if it needed to happen at all.
 
 ### The Last Question - Isaac Asimovi (October 19th)
 
