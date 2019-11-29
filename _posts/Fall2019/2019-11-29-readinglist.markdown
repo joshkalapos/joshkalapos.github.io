@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Reading List 2019"
-date: 2019-09-03
-excerpt: "A collection of the books that I have read starting Summer 2019"
+date: 2019-11-29
+excerpt: "A collection of the books that I have read June through December 2019"
 
 comments: false 
 ---
@@ -26,7 +26,25 @@ but I would not count on it.
 ### Blueprint: The Evolutionary Origins of a Good Society (October 16th - )
 
 This book I have in physical print. Cross country post-season is starting
-so maybe I'll read during bus rides.
+so maybe I'll read during bus rides. Update: Putting this book off a lot
+by reading other books but eventually I will finish it.
+
+### With the Old Breed - Eugene Sledge (November 23rd - November 27th)
+
+Figured that a lot of the books that I have been reading have been from authors
+analyzing the feelings and motivations of people of great influence during
+times of war. Presidents for example, or the multitude of generals that
+are depicted in "The Guns of August." So, as a change of pace, I read 
+"With the Old Breed" by Eugene Sledge. The content of this book should be
+familiar to those that have watched the HBO miniseries, The Pacific, because
+that is what the episodes about Peleliu and Okinawa were based on. Sledge 
+is a mortarman in the 1st Marine Division and "With the Old Breed" is his
+recounting of his experiences many years following the war. From his own
+memory, as well as notes that he kept written between the lines of his 
+New Testament Bible, Sledge gives a very close up view of the grueling fights
+that took place in the Pacific front. As my version's introduction says, not many
+soldiers of his rank decided to keep detailed record of their experiences, so
+his tale is very much worth taking in. 
 
 ### The Guns of August - Barbara W. Tuchman (October 18th - November 6th, 2019)
 
