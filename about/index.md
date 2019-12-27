@@ -37,6 +37,8 @@ My team and I use this really old site
 [Logarun](http://www.logarun.com/calendars/joshkalapos/) to track our 
 training. Though I now also use [Strava](https://www.strava.com/athletes/40109316) since it automatically gets uploaded by my watch.
 
+Recently (Nov 2019) I broke my ankle so I have not been running (sad). Hope to return soon.
+
 <center>
   <iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/40109316/activity-summary/a88a0b6200daf558b8e69f09baf0244d316674eb'></iframe>
 </center>
@@ -67,14 +69,16 @@ Currently I am majoring in Computer Science with a minor in Robotics
 ***Relevant Coursework***
 
 **Classes this semester**
-- [15-740 Computer Architecture](https://www.cs.cmu.edu/afs/cs/academic/class/15740-f19/www/index.html)
-- [15-424 Logical Foundations of Cyber-Physical Systems](http://lfcps.org/course/lfcps19.html)
-- [15-463 Computational Photography](http://graphics.cs.cmu.edu/courses/15-463/)
+- [15-410 Operating System Design and Implementation](https://www.cs.cmu.edu/~410/)
+- [15-451 Design and Analysis of Algorithm]()
 
 **Previous Semesters**
 
 *Computer Science*
 
+- [15-740 Computer Architecture](https://www.cs.cmu.edu/afs/cs/academic/class/15740-f19/www/index.html)
+- [15-424 Logical Foundations of Cyber-Physical Systems](http://lfcps.org/course/lfcps19.html)
+- [15-463 Computational Photography](http://graphics.cs.cmu.edu/courses/15-463/)
 - [15-462 Computer Graphics](http://15462.courses.cs.cmu.edu/fall2018/home)
 - [15-418 Parallel Computing Architecture and Programming](https://www.cs.cmu.edu/afs/cs/academic/class/15418-s18/www/)
 - [15-213 Introduction to Computer Systems](https://www.cs.cmu.edu/afs/cs/academic/class/15213-f17/www/)
