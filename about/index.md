@@ -51,9 +51,10 @@ university.
 
 I had taken the course my freshman fall and inherited it a year later
 when the former instructors graduated. Since then, my friends and I have taught this
-course to classes averaging around 15 students for the Spring 18, Fall 18, Spring 19 and now Fall 19 semesters. The curriculum is primarily studying the
-inspirations that led to the creation of Star Wars and then also the effects
-that it has had on culture following each movie release.
+course to classes averaging around 15 students for every semester from Spring 18 to Spring 2020.
+As I am graduating this year, this is actually my last semester teaching the course.
+The curriculum is primarily studying the inspirations that led to the creation of Star 
+Wars and then also the effects that it has had on culture following each movie release.
 
 <figure>
   <a href="/assets/img/about/StarWars_Stuco.png"><img src="/assets/img/about/StarWars_Stuco.png"></a>
@@ -70,7 +71,8 @@ Currently I am majoring in Computer Science with a minor in Robotics
 
 **Classes this semester**
 - [15-410 Operating System Design and Implementation](https://www.cs.cmu.edu/~410/)
-- [15-451 Design and Analysis of Algorithm]()
+- [15-451 Design and Analysis of Algorithm](https://www.cs.cmu.edu/afs/cs/academic/class/15451-s20/www/index.html)
+- 79-268 World War I: The Twentieth Century’s First Catastrophe
 
 **Previous Semesters**
 

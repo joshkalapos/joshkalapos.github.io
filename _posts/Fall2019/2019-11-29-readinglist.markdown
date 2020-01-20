@@ -23,12 +23,6 @@ essential apps like Facebook with the Books app.
 Maybe I will write some words about each book after I finish reading them,
 but I would not count on it. 
 
-### Blueprint: The Evolutionary Origins of a Good Society (October 16th - )
-
-This book I have in physical print. Cross country post-season is starting
-so maybe I'll read during bus rides. Update: Putting this book off a lot
-by reading other books but eventually I will finish it.
-
 ### With the Old Breed - Eugene Sledge (November 23rd - November 27th)
 
 Figured that a lot of the books that I have been reading have been from authors
