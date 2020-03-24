@@ -99,3 +99,10 @@ Currently I am majoring in Computer Science with a minor in Robotics
 - 21-241 Matrices and Linear Transformations
 - 21-259 Calculus in 3D
 - 36-217 Probability and Random Processes
+
+*Humanities*
+- 82-171 Elementary Japanese I 
+- 79-350 Early Christianity
+- 73-102 Principles of Microeconomics
+- 85-211 Cognitive Psychology
+- 80-250 Ancient Philosphy

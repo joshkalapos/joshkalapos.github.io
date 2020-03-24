@@ -14,7 +14,7 @@ In this project we revisit Scene Completion with a Million Photographs, a paper 
 
 # Project Paper
 
-Details about this project can be found in the short paper that I had to write. You can pull it up [here](/assets/img/scenecompletion/scenecompletion.pdf).
+Details about this project can be found in the short paper that I had to write. You can pull it up [here](/assets/img/scenecompletion/SceneCompletion.pdf).
 
 # Project Video
 {% include youtube.html id="j9WmKgb3Rgc" %}
