@@ -1,113 +1,147 @@
----
-layout: post
-title: "Reading List 2020"
-date: 2020-01-08
+--- 
+layout: post 
+title: "Reading List 2020" 
+date: 2020-01-08 
 excerpt: "A collection of the books that I have read in the year 2020"
 
 comments: false 
 ---
 
-This year for 2020 I hope to continue reading and documenting which books 
-that I complete here on this website. Though I also found it convenient
-to use [goodreads](https://www.goodreads.com/review/list/104759146) to keep track of books as well. Giving complete reviews/reflections on these
-books is not really my goal, but I might provide some aspect that I
-found interesting or possibly a description of what was going on in
-my life at the time I read the book.  
+This year for 2020 I hope to continue reading and documenting which books that
+I complete here on this website. Though I also found it convenient to use
+[goodreads](https://www.goodreads.com/review/list/104759146) to keep track of
+books as well. Giving complete reviews/reflections on these books is not really
+my goal, but I might provide some aspect that I found interesting or possibly a
+description of what was going on in my life at the time I read the book.  
 
-### The Path to War: How the First World War Created Modern America
+### History of the Peloponnesian War
 
-Another book for the World War I class. Rather than being an account of the war and its 
-battles, this class is more about the cultural shifts that happened to the involved countries. 
-For example, the US going from a neutral power to sending millions overseas to fight on the
-Western Front. Or additionally, how the countries had to change their industries to be able
-to field such massive armies. 
+I started reading this lengthy book over spring break and got a quarter of the way through,
+but I have not touched it since. Once summer begins, I hope to resume reading. 
 
-### Rites of Spring: The Great War and the Birth of the Modern Age
+### Korea's Place in the Sun
 
-One of the books I will be reading while studying World War I for a class. From the syllabus, this 
-book is read interchangably with a couple others in a rotation, and I will not reach its
-conclusion until the end of the semester. 
+I actually do not know that much about Korean history, so I picked up this book
+to learn some. With other books in the way, and classes taking over my time,
+this book has become somewhat of a side read that I slowly progress through.
+The author (Bruce Cumings) is an American, but has gathered a lot of
+information about Korea and has personal experience as well with the country.
+Still, it has somewhat of an outsider perspective on the country. This is not a
+total disadvantage as there are some patterns or events that Cumings is able to
+recognize for their importance, that perhaps a Korean author would have skipped
+over or liked to forget. I enjoyed so far the early chapters on all of Korean
+history leading up to the 1800s, though well over half of the book is dedicated
+to the past 100 years of Korean (both North and South) history. 
+
+### Practical File System Design with the Be File System (March 6th - March 21st)
+
+This book I read for my 15-410 (Operating Systems) book report. The text
+describes the implementation of a filesystem for an operating system that (I
+don't think) exists anymore. Because of its age, and from its relatively rapid
+development under a small team, the filesystem structure I believe is not too
+hard to understand. Reading this should help with understanding more modern
+filesystem designs that have likely grown greatly in complexity.   
+
+### The Path to War: How the First World War Created Modern America 
+
+Another book for the World War I class. Rather than being an account of the war
+and its battles, this class is more about the cultural shifts that happened to
+the involved countries. For example, the US going from a neutral power to
+sending millions overseas to fight on the Western Front. Or additionally, how
+the countries had to change their industries to be able to field such massive
+armies. 
+
+### Rites of Spring: The Great War and the Birth of the Modern Age (January 18th - April 30th)
+
+One of the books I have read reading in my WWI history class. This book mainly talks about
+the cultural changes before/during/after World War I from the European perspective. 
 
 ### Please Look After Mom (March 11th)
 
-Continuing the Libby streak of books, though spring break is coming to an end so I have to resume the
-usual work. This kernel project is not going to write itself. I read this book on the recommendation
-from my mom, as it is a story of a Korean family that loses their elderly mom in the subway. After
-losing her, they all reflect on who their mom really was and about all the sacrifices that she
-had made for all of them to live the way they do. This book is almost entirely written in the second
-person, to give a feeling that it is "you." Also though, who you are changes as the story goes between
-two different daughters, a son, and the father. The only first person chapter is the mother, but often
-I was always wondering "who am I at this point" because the story kind of just expects you to know.
-Though, after a bit you can pick up the details. Kind of embarassing, but I thought that this book was
-a true story, mainly because my mind was still thinking about the two memoirs that I had just read. This
-book is actually a novel and no moms were lost in the making of this book.
+Continuing the Libby streak of books, though spring break is coming to an end
+so I have to resume the usual work. This kernel project is not going to write
+itself. I read this book on the recommendation from my mom, as it is a story of
+a Korean family that loses their elderly mom in the subway. After losing her,
+they all reflect on who their mom really was and about all the sacrifices that
+she had made for all of them to live the way they do. This book is almost
+entirely written in the second person, to give a feeling that it is "you." Also
+though, who you are changes as the story goes between two different daughters,
+a son, and the father. The only first person chapter is the mother, but often I
+was always wondering "who am I at this point" because the story kind of just
+expects you to know.  Though, after a bit you can pick up the details. Kind of
+embarassing, but I thought that this book was a true story, mainly because my
+mind was still thinking about the two memoirs that I had just read. This book
+is actually a novel and no moms were lost in the making of this book.
 
 ### When Breath Becomes Air (March 9th - March 10th)
 
-Another book I found on Libby that I remember seeing it being recommended in one place or another.
-Overall less than half as long as Educated. This book is another memoir, but is about a neurosurgeon
-who has been diagnosed with terminal lung cancer. In this book the author reflects from his unique
-perspective as a neurosurgeion about life and what makes it worth living. Witnessing a lot of crippling
-head trauma and performing surgeries that might leave people not the same, the author had not only
-seen regular death, but also sometimes the death of the individual's personality, even though their
-body survives. The author spent around the final couple years of his life writing this memoir, while also
-performing still as a neurosurgeon.
+Another book I found on Libby that I remember seeing it being recommended in
+one place or another.  Overall less than half as long as Educated. This book is
+another memoir, but is about a neurosurgeon who has been diagnosed with
+terminal lung cancer. In this book the author reflects from his unique
+perspective as a neurosurgeion about life and what makes it worth living.
+Witnessing a lot of crippling head trauma and performing surgeries that might
+leave people not the same, the author had not only seen regular death, but also
+sometimes the death of the individual's personality, even though their body
+survives. The author spent around the final couple years of his life writing
+this memoir, while also performing still as a neurosurgeon.
 
 ### Educated (March 8th - March 9th)
 
-I've acquried an iPad and there's an app called Libby that lets you check out ebooks from the local
-library system. Because the guy Bill Gates recommended this book, it was on my list but I had not
-read it as buying books all the time is quite an expense. So now that I could read it for "free," 
-I finished it in less than two days. It's spring break, and as I still have post surgery wounds 
-from my ankle, I could not travel. So here I am just reading books and playing video games. Previously
-I have mostly been reading IR or history books, so reading a memoir felt quite different. First, I
-thought everything was much easier to understand. Reading a page of Educated felt twice as fast
-as when I read a page from Blueprint. Second, as it was a memoir, the experience I got from reading
-was a lot more personal, as it was focused on a single life experience, rather than the collective
-human history described in Carl Sagan's Cosmos. This page is more a collection of things that I have
-read than a place for book reviews, but this book to me was definitely worth the time spent reading it.
+I've acquried an iPad and there's an app called Libby that lets you check out
+ebooks from the local library system. Because the guy Bill Gates recommended
+this book, it was on my list but I had not read it as buying books all the time
+is quite an expense. So now that I could read it for "free," I finished it in
+less than two days. It's spring break, and as I still have post surgery wounds
+from my ankle, I could not travel. So here I am just reading books and playing
+video games. Previously I have mostly been reading IR or history books, so
+reading a memoir felt quite different. First, I thought everything was much
+easier to understand. Reading a page of Educated felt twice as fast as when I
+read a page from Blueprint. Second, as it was a memoir, the experience I got
+from reading was a lot more personal, as it was focused on a single life
+experience, rather than the collective human history described in Carl Sagan's
+Cosmos. This page is more a collection of things that I have read than a place
+for book reviews, but this book to me was definitely worth the time spent
+  reading it.
 
 ### Cosmos (January 7th - January 24th)
 
-I made a lot of progress on this book the first two days I read it. 
-Then I got poisioned by a Costco hot dog and lost my reading rhythm. 
-School semester started so I started reading in the occasional freetime
-I had, but this book really got finished while I was waiting in the
-surgery pre-op room. As I was only getting my screws removed from my ankle,
-more urgent surgeries got put ahead of me so I had to wait a couple
-hours. Cosmos, written by Carl Sagan, is essentially the book version
-of the famous TV show "Cosmos" also by Carl Sagan. At the time the book
-was written, the Cold War was in it's last tense decade, and the depths
-of the universe were being discovered through our telescopes and unmanned
-spacecraft. Carl Sagan emphasizes that science should be popularized and
-shared among the public, which is the reason for his efforts of
-sharing the mysteries of the cosmos through the rising medium of
-television. What Sagan covers is a vast array of topics, from the origins
-of the universe, to the first practice of science in Ionian Greece, to the
-distant future potential of humanity. Myself being interested in ancient
-history since I was a kid, I really enjoyed any discussion about the
-growth of science and exploration in the ancient world. The resourcefulness
-of our ancestors from 2500 years ago I think is surprising to most people
-and we often attribute a lot of discovery to the renaissance era. For
-example, there were some who had already contemplated that one might
-reach India by sailing west from Spain. Around this time as well, there
-had already been explorers who had circumnavigated the entire continent
-of Africa. The Mediteranean world and beyond was a bit more connected
-than is commonly known, though this gap in public knowledge is likely
-caused by the end of the ancient world begun by the fall of the Roman
-Empire. 
+I made a lot of progress on this book the first two days I read it.  Then I got
+poisioned by a Costco hot dog and lost my reading rhythm.  School semester
+started so I started reading in the occasional freetime I had, but this book
+really got finished while I was waiting in the surgery pre-op room. As I was
+only getting my screws removed from my ankle, more urgent surgeries got put
+ahead of me so I had to wait a couple hours. Cosmos, written by Carl Sagan, is
+essentially the book version of the famous TV show "Cosmos" also by Carl Sagan.
+At the time the book was written, the Cold War was in it's last tense decade,
+and the depths of the universe were being discovered through our telescopes and
+unmanned spacecraft. Carl Sagan emphasizes that science should be popularized
+and shared among the public, which is the reason for his efforts of sharing the
+mysteries of the cosmos through the rising medium of television. What Sagan
+covers is a vast array of topics, from the origins of the universe, to the
+first practice of science in Ionian Greece, to the distant future potential of
+humanity. Myself being interested in ancient history since I was a kid, I
+really enjoyed any discussion about the growth of science and exploration in
+the ancient world. The resourcefulness of our ancestors from 2500 years ago I
+think is surprising to most people and we often attribute a lot of discovery to
+the renaissance era. For example, there were some who had already contemplated
+that one might reach India by sailing west from Spain. Around this time as
+well, there had already been explorers who had circumnavigated the entire
+continent of Africa. The Mediteranean world and beyond was a bit more connected
+than is commonly known, though this gap in public knowledge is likely caused by
+the end of the ancient world begun by the fall of the Roman Empire. 
 
 ### All the Shah's Men (January 5th - January 6th)
 
-Picked this book up after the United States military killed Iranian 
-general Qassem Soleimani in a drone strike. Writing about this subject
-online is a hot take that I won't take a risk for. Old opinions tend
-to resurface at inconvenient times. 
+Picked this book up after the United States military killed Iranian general
+Qassem Soleimani in a drone strike. Writing about this subject online is a hot
+take that I won't take a risk for. Old opinions tend to resurface at
+inconvenient times. 
 
-### Blueprint: The Evolutionary Origins of a Good Society (October 16th - January 3rd)
+### Blueprint: The Evolutionary Origins of a Good Society (October 16th -
+January 3rd)
 
-I actually started this book deep in 2019 but did not finish it until
-winter break in 2020. For a better review, you can probably read the
-one [Bill Gates](https://www.gatesnotes.com/Books/Blueprint) wrote. This
-book takes an evolutionary approach to how humans have evolved to be
-cooperative and social. 
+I actually started this book deep in 2019 but did not finish it until winter
+break in 2020. For a better review, you can probably read the one [Bill
+Gates](https://www.gatesnotes.com/Books/Blueprint) wrote. This book takes an
+evolutionary approach to how humans have evolved to be cooperative and social. 
