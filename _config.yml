@@ -1,7 +1,7 @@
 # Site
 title:              Josh Kalapos
-bio:                'CS Senior at Carnegie Mellon University'
-description:        "CS major, Robotics minor, distance runner"
+bio:                'Software Engineer at Amazon Robotics'
+description:        "Software Engineer, distance runner"
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
@@ -36,7 +36,7 @@ disqus_shortname:   jkalapos
   #ad-client:
   #ad-slot:
 #bing-verify:
-email:              jkalapos@andrew.cmu.edu
+email:              joshuakalapos@andrew.cmu.edu
 #twitter:            username
 facebook:           josh.kalapos
 github-url:         joshkalapos
