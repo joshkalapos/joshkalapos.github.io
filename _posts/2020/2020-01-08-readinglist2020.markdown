@@ -12,7 +12,56 @@ I complete here on this website. Though I also found it convenient to use
 [goodreads](https://www.goodreads.com/review/list/104759146) to keep track of
 books as well. Giving complete reviews/reflections on these books is not really
 my goal, but I might provide some aspect that I found interesting or possibly a
-description of what was going on in my life at the time I read the book.  
+description of what was going on in my life at the time I read the book. Also
+a disclaimer, these notes get written in about five minutes each, so expect
+grammar mistakes, or not totally thought out points or statements.
+
+### Accessory to War: The Unspoken Alliance Between Astrophysics and the Military (December)
+
+I started this book in September, and, as you can see below, I finished a
+handful of books in the meantime. Not that I did not enjoy this book, but it is
+pretty detailed. To support that point, of the 576 pages in the print edition
+that I read, the actual content of the book ends on page 404, leaving the rest
+for acknowledgements, notes, index and citations. Though, there is nothing
+dense about the language used, but the tiresome part is that multiple times
+through the book flies through multiple periods of history, and what government
+official said what, or what report declared this to that. This approach
+certainly has its benefits, as each point or statement about history can be
+quickly traced to some citation. By the end, I was happy enough to know more
+about the importance of space technology, and the critical role that the
+military plays in its development.  The most repeated idea presented is that of
+dual use, in which technologies developed for purposes of war can just as
+easily have peacetime benefit (GPS being a popular example). This also goes the
+other way around when peaceful technologies can be adapted into a tool for war. 
+
+### Ages of Discord (November)
+
+Also by Peter Turchin, Ages of Discord relies at least 10x more on data than any other book that I've
+read. For most of his books, Turchin has investigated the rise and fall of societies. Though this is
+a topic explored by many, his approach creates a model by which to measure a society's stability or
+success, and then uses vast quantities of data with additional statistical methods to support the model.
+Following an introduction, the entire second part of Ages of Discord is dedicated to building such
+a model, which then for the rest of the book he tests out on American civilization from the 1800s
+to present day. Data is not as abundant in the 19th century, and a lot of times there are a lot of
+different dynamics that can affect a nation's stability, but the model does surprisingly well. If
+there is a point that Turchin makes in the book, it's that the overproduction of elites is the
+most significant contributor to a society's instability. If you would like to know why, I would
+recommend reading this book and learning, as Turchin calls it, Structural Demographic Theory.
+
+### Ultrasociety: How 10,000 Years of War Made Humans the Greatest Cooperators on Earth (November)
+
+This book I found through the author getting mentioned by the Economist. This eventually was
+followed by my reading of Ages of Discord (Described above). Ultrasociety I would peg as more
+similar to a previous book I read, Sapiens. Both books start from the beginning of humanity
+to the present day, and present motivations for how our societies work as they do. In this case,
+Turchin believes that our societies have been built by cooperation and competition. Specifically,
+groups that have strong intra-cooperation can out-compete those that have weak intra-cooperation.
+As a result over time, groups that were more cooperative would grow bigger, more numerous, and more
+powerful than those to do so. Overall this theory can be called Cultural Evolution, as it applies
+principles of biological evolution to the development of societies. The story is pretty believable
+after some consideration, especially as opposed to supporters of the opposite, such as the Selfish
+Gene. Besides Ages of Discord also by Peter Turchin, another book this makes me want to pick up
+is Guns, Germs and Steel.
 
 ### Arabian Sands (October)
 
