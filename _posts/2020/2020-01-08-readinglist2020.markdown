@@ -12,8 +12,8 @@ I complete here on this website. Though I also found it convenient to use
 [goodreads](https://www.goodreads.com/review/list/104759146) to keep track of
 books as well. Giving complete reviews/reflections on these books is not really
 my goal, but I might provide some aspect that I found interesting or possibly a
-description of what was going on in my life at the time I read the book. Also
-a disclaimer, these notes get written in about five minutes each, so expect
+description of what was going on in my life at the time I read the book. Also a
+disclaimer, these notes get written in about five minutes each, so expect
 grammar mistakes, or not totally thought out points or statements.
 
 ### Accessory to War: The Unspoken Alliance Between Astrophysics and the Military (December)
@@ -36,50 +36,57 @@ other way around when peaceful technologies can be adapted into a tool for war.
 
 ### Ages of Discord (November)
 
-Also by Peter Turchin, Ages of Discord relies at least 10x more on data than any other book that I've
-read. For most of his books, Turchin has investigated the rise and fall of societies. Though this is
-a topic explored by many, his approach creates a model by which to measure a society's stability or
-success, and then uses vast quantities of data with additional statistical methods to support the model.
-Following an introduction, the entire second part of Ages of Discord is dedicated to building such
-a model, which then for the rest of the book he tests out on American civilization from the 1800s
-to present day. Data is not as abundant in the 19th century, and a lot of times there are a lot of
-different dynamics that can affect a nation's stability, but the model does surprisingly well. If
-there is a point that Turchin makes in the book, it's that the overproduction of elites is the
-most significant contributor to a society's instability. If you would like to know why, I would
-recommend reading this book and learning, as Turchin calls it, Structural Demographic Theory.
+Also by Peter Turchin, Ages of Discord relies at least 10x more on data than
+any other book that I've read. For most of his books, Turchin has investigated
+the rise and fall of societies. Though this is a topic explored by many, his
+approach creates a model by which to measure a society's stability or success,
+and then uses vast quantities of data with additional statistical methods to
+support the model.  Following an introduction, the entire second part of Ages
+of Discord is dedicated to building such a model, which then for the rest of
+the book he tests out on American civilization from the 1800s to present day.
+Data is not as abundant in the 19th century, and a lot of times there are a lot
+of different dynamics that can affect a nation's stability, but the model does
+surprisingly well. If there is a point that Turchin makes in the book, it's
+that the overproduction of elites is the most significant contributor to a
+society's instability. If you would like to know why, I would recommend reading
+this book and learning, as Turchin calls it, Structural Demographic Theory.
 
 ### Ultrasociety: How 10,000 Years of War Made Humans the Greatest Cooperators on Earth (November)
 
-This book I found through the author getting mentioned by the Economist. This eventually was
-followed by my reading of Ages of Discord (Described above). Ultrasociety I would peg as more
-similar to a previous book I read, Sapiens. Both books start from the beginning of humanity
-to the present day, and present motivations for how our societies work as they do. In this case,
-Turchin believes that our societies have been built by cooperation and competition. Specifically,
-groups that have strong intra-cooperation can out-compete those that have weak intra-cooperation.
-As a result over time, groups that were more cooperative would grow bigger, more numerous, and more
-powerful than those to do so. Overall this theory can be called Cultural Evolution, as it applies
-principles of biological evolution to the development of societies. The story is pretty believable
-after some consideration, especially as opposed to supporters of the opposite, such as the Selfish
-Gene. Besides Ages of Discord also by Peter Turchin, another book this makes me want to pick up
-is Guns, Germs and Steel.
+This book I found through the author getting mentioned by the Economist. This
+eventually was followed by my reading of Ages of Discord (Described above).
+Ultrasociety I would peg as more similar to a previous book I read, Sapiens.
+Both books start from the beginning of humanity to the present day, and present
+motivations for how our societies work as they do. In this case, Turchin
+believes that our societies have been built by cooperation and competition.
+Specifically, groups that have strong intra-cooperation can out-compete those
+that have weak intra-cooperation.  As a result over time, groups that were more
+cooperative would grow bigger, more numerous, and more powerful than those to
+do so. Overall this theory can be called Cultural Evolution, as it applies
+principles of biological evolution to the development of societies. The story
+is pretty believable after some consideration, especially as opposed to
+supporters of the opposite, such as the Selfish Gene. Besides Ages of Discord
+also by Peter Turchin, another book this makes me want to pick up is Guns,
+Germs and Steel.
 
 ### Arabian Sands (October)
 
 ### The Persian Expedition (October)
 
-This book was probably the easiest ancient text I have read so far. There are far
-fewer characters in the story compared to the History of the Peloponnesian War, and
-the basic goal of the tale is simple. Get the 10,000 Greek mercenaries from Persia
-to Greece without getting wiped out. The author, Xenophon, claims an important role 
-in this feat, as he was one of the generals that led the army back home. Though, as
-an early side-note, his version of the journey and his part in it are somewhat 
-historically disputed by a different account by a different author. Though, as
-ancient history is, it is difficult to know the real truth. Certainly, Xenophon
-when writing this in his older age might have enhanced some details from his
-memory, even if he additionally had kept his own journal. While the events of
-the Persian Expedition have larger implications on later Greek history (Rise of 
-war as a profession, new military tactics involving more light infantry, and
-reserves), it can also be read as its own self-contained story.
+This book was probably the easiest ancient text I have read so far. There are
+far fewer characters in the story compared to the History of the Peloponnesian
+War, and the basic goal of the tale is simple. Get the 10,000 Greek mercenaries
+from Persia to Greece without getting wiped out. The author, Xenophon, claims
+an important role in this feat, as he was one of the generals that led the army
+back home. Though, as an early side-note, his version of the journey and his
+part in it are somewhat historically disputed by a different account by a
+different author. Though, as ancient history is, it is difficult to know the
+real truth. Certainly, Xenophon when writing this in his older age might have
+enhanced some details from his memory, even if he additionally had kept his own
+journal. While the events of the Persian Expedition have larger implications on
+later Greek history (Rise of war as a profession, new military tactics
+involving more light infantry, and reserves), it can also be read as its own
+self-contained story.
  
 ### History of the Peloponnesian War
 
@@ -91,63 +98,68 @@ more well written passages that I've read.
 
 ### Sapiens: A Brief History of Mankind (August 29th - September 5th)
 
-Not a short book, but for one that covers the entire history of humanity it compresses
-a great deal of ideas into a few humble hundreds of pages. 
+Not a short book, but for one that covers the entire history of humanity it
+compresses a great deal of ideas into a few humble hundreds of pages. 
 
 ### Born to Run (August 11th - August 19th)
 
-Solid quick read that anybody involved in distance running should probably would
-find interesting. 
+Solid quick read that anybody involved in distance running should probably find
+interesting. 
 
 ### The Abolition of Man (July 8th - July 16th)
 
-Another book by C.S. Lewis that I listened to. I was pretty bored for the majority of the book, and
-I do not think that my brain was able to store some of the contents. Mostly the early chapters talked
-about education, and I could not relate too well to 1950s British education. 
-The only chapter that had my interest was the final one. It was of course called, "The Abolition of Man," 
-and, what I felt was sudden, started going on about the conquest of nature, and the final conquest of
-mankind. By conquest, what I think was meant is that more people can be controlled by fewer individuals. 
-Historically it does seem like the trend, with better communications, logistics making it easy to exert 
-influence across more space. I don't consider technological progress as only a means to control, but 
-it is a use case that should be kept in mind.  
+Another book by C.S. Lewis that I listened to. I was pretty bored for the
+majority of the book, and I do not think that my brain was able to store some
+of the contents. Mostly the early chapters talked about education, and I could
+not relate too well to 1950s British education.  The only chapter that had my
+interest was the final one. It was of course called, "The Abolition of Man,"
+and, what I felt was sudden, started going on about the conquest of nature, and
+the final conquest of mankind. By conquest, what I think was meant is that more
+people can be controlled by fewer individuals.  Historically it does seem like
+the trend, with better communications, logistics making it easy to exert
+influence across more space. I don't consider technological progress as only a
+means to control, but it is a use case that should be kept in mind.  
 
 ### The Great Divorce (July 2nd - July 7th)
 
-This book, also by C.S. Lewis, I thought was pretty weird because it was an attempt to come up 
-with a best guess as to what heaven could be like. There's not much material to go off, so I
-forgive him for the initial confusion I felt during the book, and eventually how it all turns
-out to be some weird dream that the main character had. The main character is primarily an observer
-of other visitors that have come up to heaven, where some either accept or reject the possibility of
-continuing their existence there. 
+This book, also by C.S. Lewis, I thought was pretty weird because it was an
+attempt to come up with a best guess as to what heaven could be like. There's
+not much material to go off, so I forgive him for the initial confusion I felt
+during the book, and eventually how it all turns out to be some weird dream
+that the main character had. The main character is primarily an observer of
+other visitors that have come up to heaven, where some either accept or reject
+the possibility of continuing their existence there. 
 
 ### Mere Christianity (June 21st - June 25th)
 
-Listened to these next three books by C.S. Lewis in their audio format. As a result, they
-did not take too long to consume. Or at least, the rate at which an audio book reads is much
-slower than what a person can normally read in their head, but it is easier to find time to listen
-to a book than to sit down and read one. It's a Christian apologetic, and I figure its worth the 
-read or listen. 
+Listened to these next three books by C.S. Lewis in their audio format. As a
+result, they did not take too long to consume. Or at least, the rate at which
+an audio book reads is much slower than what a person can normally read in
+their head, but it is easier to find time to listen to a book than to sit down
+and read one. It's a Christian apologetic, and I figure its worth the read or
+listen. 
 
 ### Memoir of a Cashier: Korean Americans, Racism, and Riots (June 15th - June 21st)
 
-A short book about a Korean American's experience with the Los Angeles riots back
-in the 90s. Carol Park was a gas station cashier in Compton and witnessed a great
-deal first hand. 
+A short book about a Korean American's experience with the Los Angeles riots
+back in the 90s. Carol Park was a gas station cashier in Compton and witnessed
+a great deal first hand. 
 
 ### The Korean War: A History (June 8th - June 18th)
 
-Another book by Bruce Cumings that explores what is the most significant time period in
-modern Korean history. Though, the book is less about the war and more about the impacts
-on the people, war crimes, and its future implications on American policy around the world. 
-In the end I think Cumings argues that it was the Korean War that sparked the beginning
-of American bases around the globe, rather than just the power vacuum that existed after
-the second world war.  
+Another book by Bruce Cumings that explores what is the most significant time
+period in modern Korean history. Though, the book is less about the war and
+more about the impacts on the people, war crimes, and its future implications
+on American policy around the world.  In the end I think Cumings argues that it
+was the Korean War that sparked the beginning of American bases around the
+globe, rather than just the power vacuum that existed after the second world
+war.  
 
 ### The Automatic Millionaire (June 15th)
 
-A short book on personal finance and how an individual should save money to build
-up wealth. The main idea is automating your finances such that you protect yourself
-from yourself and the savings happen "automatically."
+A short book on personal finance and how an individual should save money to
+build up wealth. The main idea is automating your finances such that you
+protect yourself from yourself and the savings happen "automatically."
 
 ### Korea's Place in the Sun (February 3rd - June 6th)
 
@@ -183,8 +195,9 @@ armies.
 
 ### Rites of Spring: The Great War and the Birth of the Modern Age (January 18th - April 30th)
 
-One of the books I have read reading in my WWI history class. This book mainly talks about
-the cultural changes before/during/after World War I from the European perspective. 
+One of the books I have read reading in my WWI history class. This book mainly
+talks about the cultural changes before/during/after World War I from the
+European perspective. 
 
 ### Please Look After Mom (March 11th)
 
@@ -232,7 +245,7 @@ from reading was a lot more personal, as it was focused on a single life
 experience, rather than the collective human history described in Carl Sagan's
 Cosmos. This page is more a collection of things that I have read than a place
 for book reviews, but this book to me was definitely worth the time spent
-  reading it.
+reading it.
 
 ### Cosmos (January 7th - January 24th)
 

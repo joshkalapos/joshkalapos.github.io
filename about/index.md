@@ -8,7 +8,7 @@ comments: false
 I was born in Toledo, OH but grew up in Pittsburgh, PA. There I graduated from
 Mt. Lebanon High School. Following high school, I went to Carnegie Mellon
 University's School of Computer Science where I received my bachelor's degree in
-Computer Science. Currently, I live in the Boston area and I work for Amazon Robotics. 
+Computer Science. Currently, I live in the Boston area and work for Amazon Robotics. 
 
 <figure class="third">
   <a href="/assets/img/about/mountain.jpg"><img src="/assets/img/about/mountain.jpg"></a>
