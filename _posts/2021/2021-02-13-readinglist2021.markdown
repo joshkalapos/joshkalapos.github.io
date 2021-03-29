@@ -1,5 +1,6 @@
 --- 
-layout: post title: "Reading List 2021" 
+layout: post 
+title: "Reading List 2021" 
 date: 2021-02-13 
 excerpt: "A collection of the books that I have read in the year 2021"
 
@@ -18,6 +19,24 @@ see how that changes once the weather becomes more suitable for me to spend time
 outside, and covid either fades away or we treat it more as an endemic. Also as usual,
 I wouldn't expect deep insights from anything I write, and I have yet to proofread
 these.
+
+# The Iliad and The Odyssey
+
+# The Communist Manifesto
+
+# The Man Who Mistook His Wife for a Hat
+
+# The Consolation of Philosophy
+
+# The Coddling of the American Mind
+
+# Snow Crash
+
+# A History of My Times
+
+# Think and Grow Rich
+
+# Guns, Germs, and Steel
 
 # Can't Hurt Me (February 1st - February 3rd)
 
