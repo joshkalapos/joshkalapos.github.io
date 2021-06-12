@@ -1,42 +1,175 @@
---- 
-layout: post 
-title: "Reading List 2021" 
-date: 2021-02-13 
-excerpt: "A collection of the books that I have read in the year 2021"
+--- layout: post title: "Reading List 2021" date: 2021-02-13 excerpt: "A
+collection of the books that I have read in the year 2021"
 
-comments: false 
----
+comments: false ---
 
 My goal for 2021 is to read 50 books. At the time of writing this initial
-description, I am two books behind my goal. 2021 marks beginning of the third year in
-which I have started reading outside of education again. As usual, I report all the
-books that I read using [goodreads](https://www.goodreads.com/review/list/104759146).
-A differentiator from this year and last is that I expect to be reading more consistently,
-rather than the sporadic reading sprees I had during college between tough periods
-in the semester, or during breaks. As I presently work at Amazon Robotics, I have
-plenty of free evenings relative to undergrad to spend reading. Though we'll
-see how that changes once the weather becomes more suitable for me to spend time
-outside, and covid either fades away or we treat it more as an endemic. Also as usual,
-I wouldn't expect deep insights from anything I write, and I have yet to proofread
-these.
+description, I am two books behind my goal. 2021 marks beginning of the third
+year in which I have started reading outside of education again. As usual, I
+report all the books that I read using
+[goodreads](https://www.goodreads.com/review/list/104759146).  A differentiator
+from this year and last is that I expect to be reading more consistently,
+rather than the sporadic reading sprees I had during college between tough
+periods in the semester, or during breaks. As I presently work at Amazon
+Robotics, I have plenty of free evenings relative to undergrad to spend
+reading. Though we'll see how that changes once the weather becomes more
+suitable for me to spend time outside, and covid either fades away or we treat
+it more as an endemic. Also as usual, I wouldn't expect deep insights from
+anything I write, and I have yet to proofread these.
 
-# The Iliad and The Odyssey
+# Once a Runner (May 30th - June 1st)
 
-# The Communist Manifesto
+This book is a fictional tale about a college miler Quenton Cassidy and his
+journey to run under a mile in under four minutes. While Cassidy's training is
+the overarching plot, the book itself felt more like multiple slices into
+Cassidy's life, some of which I found relatable from my own racing experiences.
+Though I did not run, as in one of the more memorable chapters, sixty 400s for
+a workout, a lot of the language used to surround running, competing,
+interacting with teammates, was I think common to anybody that has run track.
+Definitely reading the ending chapters of the book where the climactic mile
+race takes place put me there on the track with Cassidy. I was so engrossed in
+reading that chapter that, when my housemate walked in my room to ask a
+question, I felt as if I was watching a movie, and he had walked in front of
+the TV during the most important scene. I should have read this sooner, and
+it's up there right next to Born to Run in the collection of great running
+books.
 
-# The Man Who Mistook His Wife for a Hat
+# Red Plenty (May 24th - May 29th)
 
-# The Consolation of Philosophy
+Red Plenty is about the USSR from the 1950s to 1970s. To make it more
+interesting, the author chose to invent characters based on real personalities,
+rather than tell a nonfiction of what could be considered the USSR's most
+hopeful years. There are many characters in Red Plenty, and each chapter chose
+to focus on one of them. Some characters would occur once, and others would
+reappear in following chapters focused on them, or would make guest appearances
+in the chapters of other characters. The most central plot that I interpreted
+well was the rise and fall of the computerized central planning algorithm. That
+being, it was imagined at the time that the USSR could manage an entire economy
+by setting both production and consumption rates throughout the entire nation.
+What gave this massive task even the hopeful possibility of being possible was
+the introduction of the computer, and a process to solve such an optimization
+problem called linear/integer programming. Even with the new technology it's
+not difficult to see why this attempt failed, but the book itself was
+informative in that most of the described events did happen (but to real
+people).   
 
-# The Coddling of the American Mind
+# No Time Like the Future (May 17th - May 20th)
 
-# Snow Crash
+# Debugging Teams (June 21st, 2020 - May 15th)
 
-# A History of My Times
+# The Splendid and the Vile (May 4th - May 11th)
 
-# Think and Grow Rich
+If you somehow end up wanting an extremely detailed description of Winston 
+Churchill's life during the Battle of Britain, then you would be in the right
+place. Even if that is not what you want, this book also gives a great look
+into life in London during the constant air raids. I found it surprising how
+city life carried on during daily raids, and the author Erik Larkson does well
+collecting many different diary entries to create a fluid story.
 
-# Guns, Germs, and Steel
+# The Bitcoin Standard (April 22nd - May 3rd) 
+
+If you're looking for a book that'll explain the motivation behind
+cryptocurrency, rather than searching through multiple online articles, then
+I'd recommend this book. While Bitcoin is in the name and the author spends the
+later half of the book explaining Bitcoin, really the first half of the book
+that examines the history of currency is what I found the most useful.  If you
+like Keynesian economics you'd probably disagree with most of the contents, as
+the author never says one positive word about government intervention in the
+economy.  
+
+# Range: Why Generalists Triumph in a Specialized World (April 21st - April 29th)
+
+I read this book on my phone when I saw it was on Bill Gate's reading list. If you
+have yet to read a book that has a title similar sounding to the one here, I would
+recommend, but if you've read a similar themed title, there's not too much that is
+new to learn here. The one interesting chapter was about the rise in "intelligence"
+experienced in the 20th century. While one could say that rising test scores cannot
+say much about human intelligence, there did come about undeniable growth in common
+understanding of higher level abstractions. 
+
+# Astrophysics for People in a Hurry (April 19th - April 19th)
+
+My housemates said audiobooks do not count as reading, so I have limited
+my intake. Written by Neil deGrasse Tyson, this book definitely was a
+speedrun of my knowledge of astrophysics, especially as I listened to it
+on the plane rides to and from Pittsburgh/Boston at 2x speed. The book
+does exactly as it says, and gives you the overview of several topics
+and the barebones depiction of the science behind them.
+
+# The Black Swan (April 2nd - April 11th)
+
+# Fooled by Randomness (March 27th - April 1st)
+
+# The Iliad and The Odyssey (March 15th - March 26th)
+
+# The Communist Manifesto (March 20th - March 20th)
+
+# The Man Who Mistook His Wife for a Hat (March 11th - March 14th)
+
+# The Consolation of Philosophy (March 3rd - March 10th)
+
+This book is short, and written by a Roman politician Boethius during the
+collapse of Rome in the 6th century. Boethius lived mostly a life of success
+but suddenly found his fortunes reversed by those currently in power. Sent
+to prison and soon to die, he writes The Consolation of Philosophy during
+his prison days in order to prepare himself to accept his own death. I'm not
+familiar at all with medieval philosophy, but supposedly this book is foundational
+to later literature. Mostly in my limited understanding I thought it was a 
+continuation of stoic philosophy, in which, while Boethius enjoyed great
+success throughout his life, everything, including his life, was never truly
+his to keep, and on recognizing that Boethius could die knowing he had lost
+nothing.
+
+# The Coddling of the American Mind (February 27th - March 5th)
+
+This book I believe spawned from a controversial essay in the Atlantic of
+the same title. It's a notable overview of changing American culture
+over the past decade or so. Specifically, it does describe college students
+entering their freshman year after 2015 (I entered 2016) of their growing
+sensitivity. The topic itself was hot when the essay/book was published,
+and is still hot today. Having lived through these times in college,  I don't 
+think it entirely describes the common case, which the book does admit, but
+it's definitely a topic worth discussing with others, rather than ignoring.
+
+# Snow Crash (February 26th - March 1st)
+
+It's fiction. If you want to read a book written in the 90s that describes
+a futuristic world with virtual reality, consumerism taken to a new level,
+and a wild Sumerian conspiracy, then I would recommend.
+
+# A History of My Times (February 17th - February 25th)
+
+A follow up to The Peloponnesian War historically, and what formerly was
+an authorative text on the time period's events. However, as other,
+seemingly more accurate, texts were discovered, this history has fallen
+out of favor. As the introduction to the book written by the translator 
+described to me, this book is more of a story of the time period from
+the perspective of Xenophon, and is more like a memoir than a history.
+Xenophon has bias towards the Spartans, and would clearly rely on his
+own memory for recounting events, rather than investigating multiple
+sources as Thucydides did for The Peloponnesian War. However, Xenophon,
+because of his Spartan bias, does present the best look into Spartan
+life, though he is an outsider.
+
+# Think and Grow Rich (August 20th, 2020 - February 17th)
+
+I started this book last year in the fall but put it down for a couple of months. It's
+probably one of the OG self motiviation books, and by that I mean the kind of book that
+yells at you to go out there and seize success, as opposed to perhaps old philosophy books
+that would tell you in more abstract ways how to live. 
+
+# Guns, Germs, and Steel (February 4th - February 15th)
+
+Having read a couple books within the past year on human societies over
+time, Guns, Germs and Steel is one of the more popular ones out there. 
+Either as a result of it being so consumable, it can be overly simplified,
+or perhaps because it's simplified, it's consumable. That is one criticism I
+saw online, but the book itself is not short, and the author I believe gives
+a best effort to answer a tough question, why some societies obtained
+guns, germs and steel before others did. The answer itself, you'll have to 
+read to find out, but it's not difficult to recognize that we've only evolved
+on a single timeline, and so any found model cannot possibly represent the
+full set of possible outcomes given inputs.
 
 # Can't Hurt Me (February 1st - February 3rd)
 
