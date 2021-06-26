@@ -1,7 +1,10 @@
---- layout: post title: "Reading List 2021" date: 2021-02-13 excerpt: "A
-collection of the books that I have read in the year 2021"
+--- 
+layout: post 
+title: "Reading List 2021" 
+date: 2021-02-13 excerpt: "A collection of the books that I have read in the year 2021"
 
-comments: false ---
+comments: false 
+---
 
 My goal for 2021 is to read 50 books. At the time of writing this initial
 description, I am two books behind my goal. 2021 marks beginning of the third
@@ -16,6 +19,22 @@ reading. Though we'll see how that changes once the weather becomes more
 suitable for me to spend time outside, and covid either fades away or we treat
 it more as an endemic. Also as usual, I wouldn't expect deep insights from
 anything I write, and I have yet to proofread these.
+
+# Letters from a Stoic (May 21st - June 22nd)
+
+I actually had not realized I was holding onto this book for so long without finishing 
+it. Now that Boston is lightening its restrictions as covid cases decline, less of
+my evenings are spent reading. That in combination with the better weather has
+distracted me from my reading goal. Currently I stand at 23/50 books read at around
+the halfway point of the year. Soon I'll have to setup a schedule to get back on 
+track. The book itself is slightly dense, with language that is not so smooth
+to follow. Stoic philosophy bled a lot into later Christian philosophy, so I did
+not feel too out of place from Senaca's arguments. 
+
+# Effective Java (March 8th - June 12th)
+
+Started this book a long time ago and have finally made my way through it. I write
+a lot of Java so this book has been a huge source of good practice.
 
 # Once a Runner (May 30th - June 1st)
 
